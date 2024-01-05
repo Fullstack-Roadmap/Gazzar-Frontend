@@ -25,56 +25,82 @@ const App = () => {
   };
 
   return (
-    <div>
-      <section></section>
-      <section className="flex flex-col justify-center items-center bg-slate-300 p-20 gap-3">
-        <h2 className="text-blue-800 text-3xl font-bold text-center">
-          Testing Database Querying
-          <div className="text-blue-700/50 mt-1 text-xl">
-            (For SignUp Functionality)
-          </div>
+    <div className="px-[5vw] border-2 rounded-lg border-slate-200 text-[0.65rem] my-10 mx-24">
+      <section className="rounded flex flex-col justify-center items-center gap-3 my-5">
+        <h2 className="text-2xl font-bold text-center mb-3 w-full flex">
+          <p>Create a Gazzar account</p>
         </h2>
         <form
           onSubmit={CreateVendor}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-3 w-full"
         >
-          <input
-            type="text"
-            className="p-3 focus:outline-none rounded-md"
-            placeholder="Enter Name"
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="text"
-            className="p-3 focus:outline-none rounded-md"
-            placeholder="Enter Business Name"
-            onChange={(e) => setBusinessName(e.target.value)}
-          />
+          <div className="input-container">
+            <p className="font-bold">Full name</p>
+            <input
+              type="text"
+              className="input-form"
+              placeholder="Enter Name"
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
 
-          <input
-            type="text"
-            className="p-3 focus:outline-none rounded-md"
-            placeholder="Enter Email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <input
-            type="text"
-            className="p-3 focus:outline-none rounded-md"
-            placeholder="Enter Phone"
-            onChange={(e) => setPhone(e.target.value)}
-          />
-
-          <input
-            type="password"
-            className="p-3 focus:outline-none rounded-md"
-            placeholder="Enter Password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button className="bg-blue-900 text-white rounded-lg w-[70%] mt-2 p-3">
-            Submit
+          <div className="input-container">
+            <p className="font-bold">Business name</p>
+            <input
+              type="text"
+              className="input-form"
+              placeholder="Enter Business Name"
+              onChange={(e) => setBusinessName(e.target.value)}
+            />
+          </div>
+          <div className="input-container">
+            <p className="font-bold">Email</p>
+            <input
+              type="text"
+              className="input-form"
+              placeholder="Enter Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="input-container">
+            <p className="font-bold">Phone</p>
+            <input
+              type="text"
+              className="input-form"
+              placeholder="Enter Phone"
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </div>
+          <div className="input-container">
+            <p className="font-bold">Password</p>
+            <input
+              type="password"
+              className="input-form"
+              placeholder="Enter Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="input-container">
+            <p className="font-bold">Re-enter Password</p>
+            <input
+              type="password"
+              className="input-form"
+              placeholder="Enter Password"
+              onChange={(e) =>
+                e.target.value === password
+                  ? setPassword(e.target.value)
+                  : console.log("Retry password entry")
+              }
+            />
+          </div>
+          <button className="bg-blue-900 text-white rounded-lg mt-6 p-3 w-full font-bold">
+            Sign up
           </button>
         </form>
+        <footer className="font-semibold">
+          <span>Already have an account? </span>
+          <span className="text-blue-900 font-bold">Sign in</span>
+        </footer>
       </section>
     </div>
   );
