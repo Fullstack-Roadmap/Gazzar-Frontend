@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
 .input-form {
   @apply p-2 border-slate-200 border-2 focus:outline-none rounded-lg px-4 mt-1;
 }
