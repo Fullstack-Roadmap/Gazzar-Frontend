@@ -32,12 +32,12 @@ const Register = () => {
     resolver: yupResolver(schema),
   });
 
-  const CreateVendor = (e) => {
-    const { confirmPassword, ...rest } = e.target.value
+  const createVendor = (form, e) => {
+    const { confirmPassword, ...rest } = form
     console.log(rest)
     e.preventDefault();
     axios
-      .post("https://gazzar-api.onrender.com/vendor/signup", rest)
+      .post("https://gazzar-api.onrender.com/signup", rest)
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };
@@ -50,7 +50,7 @@ const Register = () => {
             <p>Create a Gazzar account</p>
           </h2>
           <form
-            onSubmit={handleSubmit(CreateVendor)}
+            onSubmit={handleSubmit(createVendor)}
             className="flex flex-col items-center gap-3 w-full"
           >
             <div className="input-container">
