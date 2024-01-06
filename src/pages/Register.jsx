@@ -44,9 +44,9 @@ const Register = () => {
 
   return (
     <div className="h-screen flex justify-center items-center w-full">
-      <div className="px-[2rem] sm:border-none border-2 rounded-lg border-slate-200 sm:text-[0.55rem] text-[0.65rem] my-10 mx-24 w-[30rem]">
-        <section className="rounded flex flex-col justify-center items-center gap-3 my-5">
-          <h2 className="text-2xl font-bold text-center mb-3 w-full flex">
+      <div className="px-[1rem] md:px-[2rem] sm:border-none border-2 rounded-lg border-slate-200 sm:text-[0.55rem] text-[0.65rem] my-10 sm:mx-6 w-[35rem] md:w-[40rem] md:h-[40rem]">
+        <section className="flex flex-col justify-center items-center gap-3 md:gap-4 my-5">
+          <h2 className="text-3xl font-bold text-center mb-3 w-full flex md:mt-4">
             <p>Create a Gazzar account</p>
           </h2>
           <form
