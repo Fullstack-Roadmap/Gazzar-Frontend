@@ -6,33 +6,40 @@ import * as yup from "yup";
 
 const Register = () => {
   const schema = yup.object().shape({
-    name: yup.string().required(),
-    businessName: yup.string().required(),
-    phone: yup.number().positive().min(10).max(10).required(),
-    email: yup.string().email().required(),
-    password: yup.string().min(4).required(),
+    name: yup.string().required("required"),
+    businessName: yup.string().required("required"),
+    phone: yup
+      .number()
+      .positive()
+      .typeError("invalid input")
+      .required("required"),
+    email: yup.string().email("invalid email").required("required"),
+    password: yup
+      .string()
+      .min(4, "use at least 4 characters")
+      .required("required"),
     confirmPassword: yup
       .string()
-      .oneOf([yup.ref("password"), null])
-      .required(),
+      .oneOf([yup.ref("password"), null], "passwords don't match")
+      .required("required"),
   });
-  const { register, handleSubmit, formState:{errors}} = useForm({
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const CreateVendor = (data) => {
-    console.log(data);
-    // e.preventDefault();
-    // axios
-    //   .post("https://gazzar-api.onrender.com/vendor/signup", {
-    //     name,
-    //     businessName,
-    //     email,
-    //     phone,
-    //     password,
-    //   })
-    //   .then((result) => console.log(result))
-    //   .catch((err) => console.log(err));
+  const CreateVendor = (e) => {
+    const { confirmPassword, ...rest } = e.target.value
+    console.log(rest)
+    e.preventDefault();
+    axios
+      .post("https://gazzar-api.onrender.com/vendor/signup", rest)
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -49,10 +56,7 @@ const Register = () => {
             <div className="input-container">
               <div className="flex justify-between">
                 <p className="font-bold">Full name</p>
-                <p className="text-red-600">
-                  {errors.name
-                    ? <p>{errors.name.message}</p>
-                    : ""}</p>
+                <p className="text-red-600">{errors.name?.message}</p>
               </div>
               <input
                 type="text"
@@ -63,7 +67,10 @@ const Register = () => {
             </div>
 
             <div className="input-container">
-              <p className="font-bold">Business name</p>
+              <div className="flex justify-between">
+                <p className="font-bold">Business Name</p>
+                <p className="text-red-600">{errors.businessName?.message}</p>
+              </div>
               <input
                 type="text"
                 className="input-form"
@@ -72,7 +79,10 @@ const Register = () => {
               />
             </div>
             <div className="input-container">
-              <p className="font-bold">Email</p>
+              <div className="flex justify-between">
+                <p className="font-bold">Email</p>
+                <p className="text-red-600">{errors.email?.message}</p>
+              </div>
               <input
                 type="text"
                 className="input-form"
@@ -81,7 +91,10 @@ const Register = () => {
               />
             </div>
             <div className="input-container">
-              <p className="font-bold">Phone</p>
+              <div className="flex justify-between">
+                <p className="font-bold">Phone</p>
+                <p className="text-red-600">{errors.phone?.message}</p>
+              </div>
               <div className="w-full flex items-stretch ">
                 <span className="text-white px-3 translate-y-[2px] flex justify-center items-center bg-blue-900 border-slate-200 rounded-l-lg">
                   +234
@@ -95,7 +108,10 @@ const Register = () => {
               </div>
             </div>
             <div className="input-container">
-              <p className="font-bold">Password</p>
+              <div className="flex justify-between">
+                <p className="font-bold">Password</p>
+                <p className="text-red-600">{errors.password?.message}</p>
+              </div>{" "}
               <input
                 type="password"
                 className="input-form"
@@ -104,7 +120,12 @@ const Register = () => {
               />
             </div>
             <div className="input-container">
-              <p className="font-bold">Re-enter Password</p>
+              <div className="flex justify-between">
+                <p className="font-bold">Confirm Password</p>
+                <p className="text-red-600">
+                  {errors.confirmPassword?.message}
+                </p>
+              </div>
               <input
                 type="password"
                 className="input-form"
