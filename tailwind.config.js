@@ -19,7 +19,11 @@ export default {
     fontFamily: {
       Poppins: "Poppins",
     },
-    extend: {},
+    extend: {
+      colors: {
+        blue: "#083167",
+      }
+    },
   },
   plugins: [],
 };

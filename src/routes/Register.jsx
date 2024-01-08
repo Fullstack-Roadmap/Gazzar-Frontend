@@ -1,8 +1,10 @@
 import axios from "axios";
 import { yupResolver } from "@hookform/resolvers/yup";
-import "../css/App.css";
+import "../css/styles.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import { Link } from "react-router-dom";
+import SignIn from "./SignIn";
 
 const Register = () => {
   const schema = yup.object().shape({
@@ -33,8 +35,8 @@ const Register = () => {
   });
 
   const createVendor = (form, e) => {
-    const { confirmPassword, ...rest } = form
-    console.log(rest)
+    const { confirmPassword, ...rest } = form;
+    console.log(rest);
     e.preventDefault();
     axios
       .post("https://gazzar-api.onrender.com/signup", rest)
@@ -96,7 +98,7 @@ const Register = () => {
                 <p className="text-red-600">{errors.phone?.message}</p>
               </div>
               <div className="w-full flex items-stretch ">
-                <span className="text-white px-3 translate-y-[2px] flex justify-center items-center bg-blue-900 border-slate-200 rounded-l-lg">
+                <span className="text-white px-3 translate-y-[2px] flex justify-center items-center bg-blue border-slate-200 rounded-l-lg">
                   +234
                 </span>
                 <input
@@ -133,13 +135,15 @@ const Register = () => {
                 {...register("confirmPassword")}
               />
             </div>
-            <button className="bg-blue-900 text-white rounded-lg mt-6 p-3 w-full font-bold">
-              Sign up
-            </button>
+            <div className="bg-blue text-white rounded-lg mt-6 p-3 w-full font-bold flex justify-center">
+              <Link to="/signin">
+                <button>Sign up</button>
+              </Link>
+            </div>
           </form>
           <footer className="font-semibold">
             <span>Already have an account? </span>
-            <span className="text-blue-900 font-bold">Sign in</span>
+            <span className="text-blue font-bold">Sign in</span>
           </footer>
         </section>
       </div>
