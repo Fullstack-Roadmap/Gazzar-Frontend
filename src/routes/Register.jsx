@@ -136,9 +136,7 @@ const Register = () => {
               />
             </div>
             <div className="bg-blue text-white rounded-lg mt-6 p-3 w-full font-bold flex justify-center">
-              <Link to="/signin">
                 <button>Sign up</button>
-              </Link>
             </div>
           </form>
           <footer className="font-semibold">
