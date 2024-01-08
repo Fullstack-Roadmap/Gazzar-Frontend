@@ -3,10 +3,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "../css/styles.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SignIn from "./SignIn";
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const schema = yup.object().shape({
     name: yup.string().required("required"),
     businessName: yup.string().required("required"),
@@ -31,15 +33,18 @@ const Register = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
+    mode: "onBlur",
+    reValidateMode: "onBlur",
     resolver: yupResolver(schema),
   });
 
   const createVendor = (form, e) => {
     const { confirmPassword, ...rest } = form;
-    console.log(rest);
+    console.log(rest + "Successfully have validated Data");
     e.preventDefault();
+    navigate("/");
     axios
-      .post("https://gazzar-api.onrender.com/signup", rest)
+      .post("https://gazzar-api.onrender.com/v1/auth/signup", rest)
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };
@@ -136,12 +141,14 @@ const Register = () => {
               />
             </div>
             <div className="bg-blue text-white rounded-lg mt-6 p-3 w-full font-bold flex justify-center">
-                <button>Sign up</button>
+              <button>Sign up</button>
             </div>
           </form>
           <footer className="font-semibold">
             <span>Already have an account? </span>
-            <span className="text-blue font-bold">Sign in</span>
+            <span className="text-blue font-bold">
+              <Link to="/signin">Sign in</Link>
+            </span>
           </footer>
         </section>
       </div>
