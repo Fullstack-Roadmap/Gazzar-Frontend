@@ -50,7 +50,8 @@ const Register = () => {
       await axios
         .post("https://gazzar-api.onrender.com/v1/auth/signup", rest)
         .then((response) => {
-          navigate("/", { state: { name: "Your Account has been created successfully" } });
+          const message = response.data.message
+          navigate("/", { state: { name: message, success: "Account created successfully, confirmation required" } });
           console.log(response);
         });
     } catch (err) {
