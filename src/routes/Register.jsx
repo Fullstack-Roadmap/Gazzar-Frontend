@@ -3,11 +3,15 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "../css/styles.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Address from "./Address";
+import { useEffect } from "react";
 
 const Register = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  var problem = "";
 
   const schema = yup.object().shape({
     name: yup.string().required("required"),
@@ -38,19 +42,29 @@ const Register = () => {
     resolver: yupResolver(schema),
   });
 
-  const createVendor = (form, e) => {
+  const createVendor = async (form, e) => {
     const { confirmPassword, ...rest } = form;
     console.log(rest + "Successfully have validated Data");
     e.preventDefault();
-    navigate("/");
-    axios
-      .post("https://gazzar-api.onrender.com/v1/auth/signup", rest)
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+    try {
+      await axios
+        .post("https://gazzar-api.onrender.com/v1/auth/signup", rest)
+        .then((response) => {
+          navigate("/", { state: { name: "Your Account has been created successfully" } });
+          console.log(response);
+        });
+    } catch (err) {
+      if (err.response) {
+        problem = JSON.stringify(err.response.data.error);
+        console.error(problem);
+        navigate("/register", {
+          state: {
+            name: problem,
+          },
+        });
+      }
+    }
   };
-
-  // (add 2nd div)
-  // remove hidden from 3rd div
 
   return (
     <div className="lg:flex">
@@ -73,6 +87,7 @@ const Register = () => {
             <h2 className="text-3xl font-bold text-center mb-3 w-full flex md:mt-4">
               <p>Create a Gazzar account</p>
             </h2>
+            <p className="text-red-500">{location.state?.name} </p>
             <form
               onSubmit={handleSubmit(createVendor)}
               className="flex flex-col items-center gap-3 w-full"
@@ -157,8 +172,8 @@ const Register = () => {
                   {...register("confirmPassword")}
                 />
               </div>
-              <div className="bg-blue text-white rounded-lg mt-6 p-3 w-full font-bold flex justify-center">
-                <button>Sign up</button>
+              <div className="bg-blue text-white rounded-lg mt-6 w-full font-bold flex justify-center">
+                <button className="w-full h-full p-3">Sign up</button>
               </div>
             </form>
             <footer className="font-semibold">
