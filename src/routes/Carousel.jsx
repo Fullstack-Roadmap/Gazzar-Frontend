@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Address from "./Address";
+import { set } from "react-hook-form";
 
 const Carousel = () => {
   const [inView, setInView] = useState(1);
@@ -23,6 +24,7 @@ const Carousel = () => {
       setInView(3);
     }
   };
+
   return (
     <>
       <span
@@ -64,19 +66,22 @@ const Carousel = () => {
         <div className="absolute z-40 bottom-10">
           <div className="flex gap-1 w-full justify-center">
             <span
+              onClick={() => setInView(1)}
               className={`${
                 inView == 1 ? "w-5 bg-white" : "bg-slate-200/40"
-              } h-2 w-2 transition-all duration-200 rounded-full `}
+              } h-2 w-2 transition-all duration-200 rounded-full cursor-pointer `}
             ></span>
             <span
+              onClick={() => setInView(2)}
               className={`${
                 inView == 2 ? "w-5 bg-white" : "bg-slate-200/40"
-              } h-2 w-2 transition-all duration-200 rounded-full `}
+              } h-2 w-2 transition-all duration-200 rounded-full cursor-pointer`}
             ></span>
             <span
+              onClick={() => setInView(3)}
               className={`${
                 inView == 3 ? "w-5 bg-white" : "bg-slate-200/40"
-              } h-2 w-2 transition-all duration-200 rounded-full `}
+              } h-2 w-2 transition-all duration-200 rounded-full cursor-pointer`}
             ></span>
           </div>
         </div>
