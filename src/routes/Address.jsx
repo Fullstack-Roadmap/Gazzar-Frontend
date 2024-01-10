@@ -1,5 +1,4 @@
 import React from "react";
-import Dots from "./Dots";
 import mySvg from "../assets/Size6.jpg";
 
 // Ready to take your business to the next level?
@@ -47,7 +46,7 @@ const Address = ({ id }) => {
         </p>
       )}
       <div>
-        <Dots />
+        
       </div>
     </div>
   );

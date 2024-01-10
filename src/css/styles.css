@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .input-form {
@@ -13,3 +13,4 @@
 .input-container {
   @apply w-full flex flex-col justify-center;
 }
+

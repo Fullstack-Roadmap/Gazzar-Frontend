@@ -5,7 +5,9 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Address from "./Address";
-import { useEffect } from "react";
+import Dots from "./Dots";
+import { useState } from "react";
+import Carousel from "./Carousel";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -50,8 +52,13 @@ const Register = () => {
       await axios
         .post("https://gazzar-api.onrender.com/v1/auth/signup", rest)
         .then((response) => {
-          const message = response.data.message
-          navigate("/", { state: { name: message, success: "Account created successfully, confirmation required" } });
+          const message = response.data.message;
+          navigate("/", {
+            state: {
+              name: message,
+              success: "Account created successfully, confirmation required",
+            },
+          });
           console.log(response);
         });
     } catch (err) {
@@ -69,18 +76,8 @@ const Register = () => {
 
   return (
     <div className="lg:flex">
-      <div className="w-1/2">
-        <div className="bg-blue lg:flex z-20 h-screen overflow-hidden md:hidden sm:hidden relative">
-          <div className="z-30 absolute">
-            <Address id="1" />
-          </div>
-          <div className="z-20 absolute">
-            <Address id="2" />
-          </div>
-          <div className="z-10 absolute">
-            <Address id="3" />
-          </div>
-        </div>
+      <div className="relative w-1/2">
+        <Carousel />
       </div>
       <div className="z-40 h-screen flex justify-center items-center lg:w-1/2 lg:px-12">
         <div className="px-[1rem] md:px-[2rem] sm:border-none border-2 rounded-lg border-slate-200 sm:text-[0.55rem] text-[0.65rem] my-10 sm:mx-6 w-[35rem] md:w-[40rem] md:h-[40rem] lg:h-auto">
