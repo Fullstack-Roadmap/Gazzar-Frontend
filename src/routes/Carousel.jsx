@@ -40,10 +40,17 @@ const Carousel = ({ id }) => {
       >
         <IoIosArrowForward style={style} />
       </span>
+      {id === "5" && (
+        <div className="z-50 md:hidden sm:hidden lg:flex absolute slide1">
+          <Address id={id} />
+        </div>
+        
+      )}
       {id === "4" ? (
         <div className="z-50 md:hidden sm:hidden lg:flex absolute slide1">
           <Address id={id} />
         </div>
+        
       ) : (
         <div className="relative bg-blue lg:flex justify-center z-20 h-screen overflow-hidden md:hidden sm:hidden">
           <div

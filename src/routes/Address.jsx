@@ -29,6 +29,9 @@ const Address = ({ id }) => {
           Ready to take your business to the next level?
         </section>
       )}
+      {id === "5" && (
+        <section className="text-3xl">You’re all ready to go! </section>
+      )}
       {id === "1" && (
         <p className="text-base font-thin">
           Save yourself the stress of manually documenting various aspects of
