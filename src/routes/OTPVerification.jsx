@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "./Carousel";
 
 const OTPVerification = () => {
+   
   return (
     <div className="lg:flex">
       <div className="relative w-1/2">
@@ -21,18 +22,22 @@ const OTPVerification = () => {
                 <input
                   type="text"
                   className="h-16 w-16 rounded-lg border-2 border-slate-900/10 text-center text-4xl font-semibold"
+                  maxLength={1}
                 />
                 <input
                   type="text"
                   className="h-16 w-16 rounded-lg border-2 border-slate-900/10 text-center text-4xl font-semibold"
+                  maxLength={1}
                 />
                 <input
                   type="text"
                   className="h-16 w-16 rounded-lg border-2 border-slate-900/10 text-center text-4xl font-semibold"
+                  maxLength={1}
                 />
                 <input
                   type="text"
                   className="h-16 w-16 rounded-lg border-2 border-slate-900/10 text-center text-4xl font-semibold"
+                  maxLength={1}
                 />
               </div>
               <div className="bg-blue text-white rounded-lg mt-10 w-full font-bold flex justify-center p-1">
@@ -40,7 +45,8 @@ const OTPVerification = () => {
               </div>
             </form>
             <footer className="p-4 font-bold text-sm text-slate-900/70 flex gap-1">
-              Didn’t receive OTP ?<p className="text-blue font-extrabold cursor-pointer">Resend</p>
+              Didn’t receive OTP ?
+              <p className="text-blue font-extrabold cursor-pointer">Resend</p>
             </footer>
           </section>
         </div>
