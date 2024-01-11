@@ -17,6 +17,7 @@ export default {
       Poppins: "Poppins",
     },
     extend: {
+      
       colors: {
         blue: "#083167",
       }
