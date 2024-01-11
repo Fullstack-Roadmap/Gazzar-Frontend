@@ -5,7 +5,7 @@ import mySvg from "../assets/Size6.jpg";
 const Address = ({ id }) => {
   return (
     <div
-      className="text-white px-10 py-16 flex flex-col w-[50vw] h-screen justify-between font-bold text-3xl box-border bg-blue
+      className="text-white p-16 flex flex-col w-[50vw] h-screen justify-between font-bold text-3xl box-border bg-blue
     "
     >
       <header className="flex justify-start items-center gap-1">
@@ -24,7 +24,11 @@ const Address = ({ id }) => {
       {id === "3" && (
         <section className="text-3xl">Business analytics.</section>
       )}
-
+      {id === "4" && (
+        <section className="text-3xl">
+          Ready to take your business to the next level?
+        </section>
+      )}
       {id === "1" && (
         <p className="text-base font-thin">
           Save yourself the stress of manually documenting various aspects of
@@ -45,9 +49,7 @@ const Address = ({ id }) => {
           how to improve your sales.
         </p>
       )}
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   );
 };

@@ -30,11 +30,11 @@ const SignIn = () => {
   };
   return (
     <div className="h-screen flex lg:justify-between justify-center items-center w-screen">
-      <div className="relative w-1/2">
+      <div className="md:hidden sm:hidden lg:inline-block relative w-1/2">
         <Carousel />
       </div>
-      <div className="z-40 h-screen flex justify-center items-center lg:w-1/2 lg:px-12">
-        <div className="px-[1rem] md:px-[2rem] sm:border-none border-2 rounded-lg border-slate-200 sm:text-[0.55rem] text-[0.65rem] my-10 sm:mx-6 w-[35rem] md:w-[40rem] md:h-[40rem] lg:h-auto">
+      <div className="z-20 h-screen flex justify-center items-center lg:w-1/2 lg:px-12 md:w-full sm:w-full">
+        <div className="flex justify-center px-[1rem] md:px-[2rem] sm:border-none border-2 rounded-lg border-slate-200 sm:text-[0.55rem] text-[0.65rem] my-10 sm:mx-6 w-[35rem] md:w-[40rem] md:h-auto lg:h-auto">
           <section className="flex flex-col justify-center items-center gap-3 md:gap-5 my-5 w-full">
             <h2 className="md:text-5xl text-3xl font-bold text-center mb-6 w-full flex md:mt-4">
               <p>Welcome</p>

@@ -53,10 +53,11 @@ const Register = () => {
         .post("https://gazzar-api.onrender.com/v1/auth/signup", rest)
         .then((response) => {
           const message = response.data.message;
-          navigate("/", {
+          navigate("/otp-verification", {
             state: {
               name: message,
-              success: "Account created successfully, confirmation required",
+              success:
+                "Account created successfully, please confirm your email address",
             },
           });
           console.log(response);
@@ -77,7 +78,7 @@ const Register = () => {
   return (
     <div className="lg:flex">
       <div className="relative w-1/2">
-        <Carousel />
+        <Carousel id="4"/>
       </div>
       <div className="z-40 h-screen flex justify-center items-center lg:w-1/2 lg:px-12">
         <div className="px-[1rem] md:px-[2rem] sm:border-none border-2 rounded-lg border-slate-200 sm:text-[0.55rem] text-[0.65rem] my-10 sm:mx-6 w-[35rem] md:w-[40rem] md:h-[40rem] lg:h-auto">
