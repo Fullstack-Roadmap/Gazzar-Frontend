@@ -79,8 +79,8 @@ const SignIn = () => {
                   <Link to="/signin">Forgot your password?</Link>
                 </span>
               </div>
-              <div className="bg-blue text-white rounded-lg mt-6 w-full font-bold flex justify-center">
-                <button className="w-full cursor-pointer  p-5">Sign in</button>
+              <div className="text-xs bg-blue text-white rounded-lg mt-6 w-full font-bold flex justify-center">
+                <button className="w-full cursor-pointer p-5">Sign in</button>
               </div>
             </form>
             <footer className="text-xs text-slate-900/70 font-bold mt-2">
