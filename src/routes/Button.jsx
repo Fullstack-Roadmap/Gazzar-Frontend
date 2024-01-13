@@ -16,7 +16,7 @@ const Button = ({ text, textColor, buttonColor, hasArrow }) => {
     >
       {text}
       {hasArrow && (
-        <div className="">
+        <div>
           <IoIosArrowForward />
         </div>
       )}
