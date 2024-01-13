@@ -6,11 +6,12 @@ const Button = ({ text, textColor, buttonColor, hasArrow }) => {
   return (
     <button
       className={`
-        px-[1.1rem] py-[0.45rem] rounded-lg border border-blue flex font-semibold
+        px-6 py-3 rounded-lg flex
       `}
       style={{
         backgroundColor: buttonColor,
-        color: textColor,
+         color: textColor,
+        fontWeight: 600,
       }}
     >
       {text}

@@ -18,7 +18,7 @@ export default {
     },
     extend: {
       boxShadow: {
-        "custom": "rgba(149, 157, 165, 0.2) 0px 8px 24px;",
+        custom: "rgba(100, 100, 111, 0.1) 0px 7px 29px 0px",
       },
       colors: {
         blue: "#083167",
