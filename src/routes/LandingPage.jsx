@@ -8,19 +8,19 @@ const LandingPage = () => {
   const blue = "#083167";
 
   return (
-    <div className="flex justify-center h-[3600px] text-blue font-bold text-2xl">
-      <nav className="top-10 sticky">
-        <header className="flex justify-start items-center gap-1">
-          <span className="rounded-sm aspect-square h-6 bg-[#FFB722]"></span>
+    <div className="flex justify-center h-[3600px] text-blue font-bold text-xl">
+      <nav className="sticky flex items-center mt-10 p-5 rounded-2xl h-fit w-full shadow-custom justify-between mx-10">
+        <header className="text-3xl flex justify-center items-center gap-1 h-fit">
+          <span className="mr-1 rounded-sm aspect-square h-6 bg-[#FFB722]"></span>
           <p>Gazzar.</p>
         </header>
-        <section>
+        <section className="flex gap-10 items-center">
           <p>Features</p>
           <p>Company</p>
           <p>Pricing</p>
           <p>Learn</p>
         </section>
-        <section>
+        <section className="flex gap-2 items-center">
           <div>
             <Button text="Login" buttonColor={blue} />
           </div>
