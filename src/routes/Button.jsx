@@ -6,17 +6,19 @@ const Button = ({ text, textColor, buttonColor, hasArrow }) => {
   return (
     <button
       className={`
-        px-8 py-3 rounded-xl flex
+        px-8 py-3 rounded-xl flex items-center gap-3
       `}
       style={{
         backgroundColor: buttonColor,
-         color: textColor,
+        color: textColor,
         fontWeight: 500,
       }}
     >
       {text}
       {hasArrow && (
-        <IoIosArrowForward/>
+        <div className="">
+          <IoIosArrowForward />
+        </div>
       )}
     </button>
   );
