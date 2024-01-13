@@ -8,11 +8,12 @@ import Register from "./routes/Register";
 import SignIn from "./routes/SignIn.jsx";
 import OTPVerification from "./routes/OTPVerification.jsx";
 import OTPVerified from "./routes/OTPVerified.jsx";
+import LandingPage from "./routes/LandingPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <LandingPage />,
   },
   {
     path: "/register",
