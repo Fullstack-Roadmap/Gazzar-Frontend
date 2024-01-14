@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <div className="m-20 ">
-      <h1 className="mt-10 text-6xl font-bold w-2/3 leading-relaxed">
+      <h1 className="mt-10 text-6xl font-bold w-2/3 leading-normal">
         Manage your business more efficiently.
       </h1>
       <p className="my-5 text-2xl font-medium w-2/3 leading-relaxed">
