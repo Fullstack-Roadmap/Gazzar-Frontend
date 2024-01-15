@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-// <Link to="register"> Register Business </Link>
-// <Link to="signin"> Sign In </Link>
 
 const LandingPage = () => {
   return (

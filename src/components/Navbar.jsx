@@ -19,10 +19,14 @@ const Navbar = () => {
       </section>
       <section className="flex gap-4 items-center font-semibold">
         <div>
-          <Button text="Login" textColor={blue} buttonColor={lightBlue} />
+          <Link to="signin">
+            <Button text="Login" textColor={blue} buttonColor={lightBlue} />
+          </Link>
         </div>
         <div>
-          <Button text="Get Started" buttonColor={blue} />
+          <Link to="register">
+            <Button text="Get Started" buttonColor={blue} />
+          </Link>
         </div>
       </section>
     </nav>

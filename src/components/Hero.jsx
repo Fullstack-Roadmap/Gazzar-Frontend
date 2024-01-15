@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Hero = () => {
@@ -14,12 +14,14 @@ const Hero = () => {
         Gazzar helps you analyze and keep track of your business growth. Setup
         your online store in just 3 minutes.
       </p>
-      <button className="mt-8 px-8 py-5 rounded-xl flex items-center gap-3 bg-blue text-white text-2xl">
-        <span>Get Started</span>
-        <div>
-          <IoIosArrowForward />
-        </div>
-      </button>
+      <Link to="register">
+        <button className="mt-8 px-8 py-5 rounded-xl flex items-center gap-3 bg-blue text-white text-2xl">
+          <span>Get Started</span>
+          <div>
+            <IoIosArrowForward />
+          </div>
+        </button>
+      </Link>
     </div>
   );
 };
