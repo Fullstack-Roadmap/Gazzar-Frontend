@@ -23,11 +23,11 @@ const Hero = () => {
         <button
           onMouseOver={toggleHover}
           onMouseOut={toggleHover}
-          className="mt-8 px-8 py-5 rounded-xl flex items-center gap-3 bg-blue text-white text-2xl"
+          className="mt-8 px-8 py-5 rounded-xl flex items-center gap-3 bg-blue text-white text-2xl hover:scale-105 transition-all duration-300"
         >
           <span>Get Started</span>
           <div
-            className={`transition-all duration-300 ${
+            className={`transition-all duration-500 ${
               isHover && "translate-x-2"
             }`}
           >
