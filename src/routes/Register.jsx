@@ -4,7 +4,7 @@ import "../css/styles.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import Carousel from "./components/Carousel";
+import Carousel from "../components/Carousel";
 
 const Register = () => {
   const navigate = useNavigate();

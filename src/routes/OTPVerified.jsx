@@ -1,4 +1,4 @@
-import Carousel from ".components/Carousel";
+import Carousel from "../components/Carousel";
 import OTPSuccessImage from "../components/OTPSuccessImage";
 
 const OTPVerified = () => {
