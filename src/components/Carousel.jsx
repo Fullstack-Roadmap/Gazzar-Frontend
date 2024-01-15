@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Address from "./Address";
+import Address from "../routes/Address";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
