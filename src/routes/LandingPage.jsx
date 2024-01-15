@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Hero from "./Hero";
+import Hero from "./components/Hero";
 // <Link to="register"> Register Business </Link>
 // <Link to="signin"> Sign In </Link>
 
