@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Hero = () => {
-     const blue = "#083167";
+  const blue = "#083167";
+  const [isHover, setIsHover] = useState(false);
+
+  const toggleHover = () => {
+    setIsHover((current) => !current);
+  };
 
   return (
     <div className="m-20 ">
@@ -15,9 +20,17 @@ const Hero = () => {
         your online store in just 3 minutes.
       </p>
       <Link to="register">
-        <button className="mt-8 px-8 py-5 rounded-xl flex items-center gap-3 bg-blue text-white text-2xl">
+        <button
+          onMouseOver={toggleHover}
+          onMouseOut={toggleHover}
+          className="mt-8 px-8 py-5 rounded-xl flex items-center gap-3 bg-blue text-white text-2xl"
+        >
           <span>Get Started</span>
-          <div>
+          <div
+            className={`transition-all duration-300 ${
+              isHover && "translate-x-2"
+            }`}
+          >
             <IoIosArrowForward />
           </div>
         </button>
