@@ -6,7 +6,7 @@ const Button = ({ text, textColor, buttonColor, hasArrow }) => {
   return (
     <button
       className={`
-        px-8 py-3 rounded-xl flex items-center gap-3
+        px-8 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition-all duration-700
       `}
       style={{
         backgroundColor: buttonColor,
