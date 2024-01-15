@@ -1,6 +1,4 @@
 
-// import SignIn from "./pages/SignIn";
-// import Register from "./pages/Register";
 // import LandingPage from "./pages/LandingPage";
 
 

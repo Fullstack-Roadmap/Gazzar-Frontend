@@ -1,7 +1,6 @@
 import Carousel from ".components/Carousel";
 import OTPSuccessImage from "../components/OTPSuccessImage";
-// Thank you for registering with Gazzar.
-// Your will be notified once your account has been successfully verified
+
 const OTPVerified = () => {
   return (
     <div className="lg:flex">

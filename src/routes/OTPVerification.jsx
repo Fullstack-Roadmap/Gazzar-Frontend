@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Carousel from "./Carousel";
+import Carousel from "./components/Carousel";
 import OTPField from "../components/OTPField";
 
 const OTPVerification = () => {

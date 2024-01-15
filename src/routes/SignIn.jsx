@@ -4,7 +4,7 @@ import "../css/styles.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
-import Carousel from "./Carousel";
+import Carousel from "./components/Carousel";
 
 const SignIn = () => {
   const schema = yup.object().shape({
