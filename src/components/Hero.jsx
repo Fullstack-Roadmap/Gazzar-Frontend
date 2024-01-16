@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Hero = () => {
-  const blue = "#083167";
   const [isHover, setIsHover] = useState(false);
 
   const toggleHover = () => {
