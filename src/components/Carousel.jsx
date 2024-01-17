@@ -80,7 +80,7 @@ const Carousel = ({ id }) => {
           >
             <Address id="3" />
           </div>
-          <div className="absolute z-40 bottom-20">
+          <div className="absolute z-40 bottom-16">
             <div className="flex gap-1 w-full justify-center">
               <span
                 onClick={() => setInView(1)}

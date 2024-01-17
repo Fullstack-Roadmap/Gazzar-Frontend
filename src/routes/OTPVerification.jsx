@@ -9,7 +9,7 @@ const OTPVerification = () => {
   const location = useLocation();
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
-  const email = location.state.email;
+  const email = location.state?.email;
 
   const handleSubmit = async () => {
     if (otp.length < 4) {
@@ -47,7 +47,7 @@ const OTPVerification = () => {
               <p>OTP Verification</p>
             </h2>
             <span className="font-bold text-xs text-center">
-              Please enter the OTP sent to {location.state.email}
+              Please enter the OTP sent to {location.state?.email}
             </span>
             <OTPField
               otpValue={(v) => {

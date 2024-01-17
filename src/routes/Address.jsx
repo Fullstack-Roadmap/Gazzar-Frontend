@@ -1,6 +1,8 @@
 import React from "react";
 import pattern from "../assets/Pattern.svg";
 import picOne from "../assets/Frame 36166 (1).png";
+import picTwo from "../assets/Store Page (2).png"
+import picThree from "../assets/Group 227 (1).png";
 
 // Ready to take your business to the next level?
 const Address = ({ id }) => {
@@ -19,7 +21,11 @@ const Address = ({ id }) => {
           src={pattern}
           alt=""
         />
-        <img className="z-20 w-2/3" src={picOne} />
+        {id === "1" && <img className="z-20 w-2/3" src={picOne} />}
+        {id === "2" && <img className="z-20 w-2/3" src={picTwo} />}
+        {id === "3" && <img className="z-20 w-full" src={picThree} />}
+        {id === "4" && <img className="z-20 w-2/3" src={picOne} />}
+        {id === "5" && <img className="z-20 w-2/3" src={picOne} />}
       </div>
       {id === "1" && (
         <section className="text-3xl z-20 w-3/5">

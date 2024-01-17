@@ -46,7 +46,9 @@ const SignIn = () => {
               <div className="input-container">
                 <div className="flex justify-between">
                   <p>Email</p>
-                  <p className="text-red-600">{errors.email?.message}</p>
+                  <p className="text-red-600 font-normal">
+                    {errors.email?.message}
+                  </p>
                 </div>
                 <input
                   type="text"
@@ -58,7 +60,9 @@ const SignIn = () => {
               <div className="input-container">
                 <div className="flex justify-between">
                   <p>Password</p>
-                  <p className="text-red-600">{errors.password?.message}</p>
+                  <p className="text-red-600 font-normal">
+                    {errors.password?.message}
+                  </p>
                 </div>{" "}
                 <input
                   type="password"
