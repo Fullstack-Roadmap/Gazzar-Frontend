@@ -9,9 +9,7 @@ import Carousel from "../components/Carousel";
 const Register = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
-  var problem = "";
-
+  var problem;
   const schema = yup.object().shape({
     name: yup.string().required("required"),
     businessName: yup.string().required("required"),
@@ -33,6 +31,7 @@ const Register = () => {
 
   const {
     register,
+    getValues,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -42,6 +41,7 @@ const Register = () => {
   });
 
   const createVendor = async (form, e) => {
+    const email = getValues("email");
     const { confirmPassword, ...rest } = form;
     console.log(rest + "Successfully have validated Data");
     e.preventDefault();
@@ -52,9 +52,8 @@ const Register = () => {
           const message = response.data.message;
           navigate("/otp-verification", {
             state: {
-              name: message,
-              success:
-                "Account created successfully, please confirm your email address",
+              message: message,
+              email: email,
             },
           });
           console.log(response);

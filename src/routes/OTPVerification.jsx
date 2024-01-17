@@ -1,16 +1,37 @@
 import React, { useState } from "react";
 import Carousel from "../components/Carousel";
 import OTPField from "../components/OTPField";
+import axios from "axios";
+import { useLocation, useNavigate } from "react-router";
 
 const OTPVerification = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
+  const email = location.state.email;
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (otp.length < 4) {
       setOtpError("Invalid input");
       return;
+    } else {
+      try {
+        const res = await axios.post(
+          "https://gazzar-api.onrender.com.gazzar-v1/auth/verify-otp",
+          {
+            email: email,
+            otp: otp,
+          }
+        );
+        if (!res) return;
+        navigate("/otp-verified");
+      } catch (error) {
+        console.log(error);
+        setOtpError(JSON.stringify(error));
+      }
     }
+
     // Submit
   };
   return (
@@ -26,7 +47,7 @@ const OTPVerification = () => {
               <p>OTP Verification</p>
             </h2>
             <span className="font-bold text-xs text-center">
-              Please enter the OTP sent to email@website.com
+              Please enter the OTP sent to {location.state.email}
             </span>
             <OTPField
               otpValue={(v) => {
