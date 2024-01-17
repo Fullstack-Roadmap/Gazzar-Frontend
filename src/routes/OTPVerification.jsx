@@ -4,10 +4,11 @@ import OTPField from "../components/OTPField";
 
 const OTPVerification = () => {
   const [otp, setOtp] = useState("");
+  const [otpError, setOtpError] = useState("");
 
   const handleSubmit = () => {
     if (otp.length < 4) {
-      alert("You dey craze");
+      setOtpError("Invalid input");
       return;
     }
     // Submit
@@ -36,6 +37,7 @@ const OTPVerification = () => {
               Didn’t receive OTP ?
               <p className="text-blue font-extrabold cursor-pointer">Resend</p>
             </footer>
+            <p className="text-red-700 font-bold">{otpError}</p>
             <div className="bg-blue text-white rounded-lg mt-10 w-[90%] font-bold flex justify-center p-1">
               <button
                 className="w-full h-full p-3 text-sm"

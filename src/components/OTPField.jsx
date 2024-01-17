@@ -30,6 +30,7 @@ const OTPField = ({ numberOfInputs = 4, otpValue }) => {
       default:
         break;
     }
+    
 
     otpValue(otpArr.join(""));
   };
@@ -67,7 +68,6 @@ const OTPField = ({ numberOfInputs = 4, otpValue }) => {
           );
         })}
       </div>
-     
     </form>
   );
 };
