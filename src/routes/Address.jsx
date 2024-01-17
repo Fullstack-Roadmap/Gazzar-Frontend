@@ -1,11 +1,12 @@
 import React from "react";
-import mySvg from "../assets/Size6.jpg";
+import pattern from "../assets/Pattern.svg";
+import picOne from "../assets/Frame 36166 (1).png";
 
 // Ready to take your business to the next level?
 const Address = ({ id }) => {
   return (
     <div
-      className="text-white p-16 flex flex-col w-[50vw] h-screen justify-between font-bold text-3xl box-border bg-blue
+      className="text-white p-16 flex flex-col w-[50vw] h-screen font-semibold text-3xl box-border bg-blue gap-8
     "
     >
       <header className="flex justify-start items-center gap-1">
@@ -13,46 +14,57 @@ const Address = ({ id }) => {
         <p>Gazzar</p>
       </header>
       <div className="flex justify-center">
-        <img className="w-60" src={mySvg} alt="" />
+        <img
+          className="w-100 top-0 z-10 -right-6 absolute"
+          src={pattern}
+          alt=""
+        />
+        <img className="z-20 w-2/3" src={picOne} />
       </div>
       {id === "1" && (
-        <section className="text-3xl">Manage your business digitally.</section>
+        <section className="text-3xl z-20 w-3/5">
+          Manage your business digitally.
+        </section>
       )}
       {id === "2" && (
-        <section className="text-3xl">Setup your store website.</section>
+        <section className="text-3xl z-20 w-3/5">
+          Setup your store website.
+        </section>
       )}
       {id === "3" && (
-        <section className="text-3xl">Business analytics.</section>
+        <section className="text-3xl z-20">Business analytics.</section>
       )}
       {id === "4" && (
-        <section className="text-3xl">
+        <section className="text-3xl z-20">
           Ready to take your business to the next level?
         </section>
       )}
       {id === "5" && (
-        <section className="text-3xl">You’re all ready to go! </section>
+        <section className="text-3xl z-20">You’re all ready to go! </section>
       )}
-      {id === "1" && (
-        <p className="text-base font-thin">
-          Save yourself the stress of manually documenting various aspects of
-          your business. Customers, sales and store products can be managed with
-          Gazzar.
-        </p>
-      )}
-      {id === "2" && (
-        <p className="text-base font-thin">
-          Having a customized website makes your business stand out as a
-          professional, and it also make it easier for your customers to see all
-          your products.
-        </p>
-      )}
-      {id === "3" && (
-        <p className="text-lg font-thin">
-          See simplified metrics of how your business is performing and tips on
-          how to improve your sales.
-        </p>
-      )}
-      <div></div>
+
+      <div>
+        {id === "1" && (
+          <p className=" text-base font-normal text-white/50 z-20 w-[90%]">
+            Save yourself the stress of manually documenting various aspects of
+            your business. Customers, sales and store products can be managed
+            with Gazzar.
+          </p>
+        )}
+        {id === "2" && (
+          <p className=" text-base font-normal text-white/50 z-20 w-[90%]">
+            Having a customized website makes your business stand out as a
+            professional, and it also make it easier for your customers to see
+            all your products.
+          </p>
+        )}
+        {id === "3" && (
+          <p className=" text-base font-normal text-white/50 z-20 w-[90%]">
+            See simplified metrics of how your business is performing and tips
+            on how to improve your sales.
+          </p>
+        )}
+      </div>
     </div>
   );
 };

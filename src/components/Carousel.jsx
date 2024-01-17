@@ -72,7 +72,7 @@ const Carousel = ({ id }) => {
             <Address id="2" />
           </div>
           <div
-            className={` ${
+            className={`${
               inView == 3
                 ? "opacity-100 duration-300 mr-0"
                 : "opacity-0 duration-50"
@@ -80,24 +80,24 @@ const Carousel = ({ id }) => {
           >
             <Address id="3" />
           </div>
-          <div className="absolute z-40 bottom-10">
+          <div className="absolute z-40 bottom-20">
             <div className="flex gap-1 w-full justify-center">
               <span
                 onClick={() => setInView(1)}
                 className={`${
-                  inView == 1 ? "w-5 bg-white" : "bg-slate-200/40"
-                } h-2 w-2 transition-all duration-200 rounded-full cursor-pointer `}
+                  inView == 1 ? "w-7 bg-white" : "bg-slate-200/40"
+                } h-2 w-2 transition-all duration-200 rounded-full cursor-pointer`}
               ></span>
               <span
                 onClick={() => setInView(2)}
                 className={`${
-                  inView == 2 ? "w-5 bg-white" : "bg-slate-200/40"
+                  inView == 2 ? "w-7 bg-white" : "bg-slate-200/40"
                 } h-2 w-2 transition-all duration-200 rounded-full cursor-pointer`}
               ></span>
               <span
                 onClick={() => setInView(3)}
                 className={`${
-                  inView == 3 ? "w-5 bg-white" : "bg-slate-200/40"
+                  inView == 3 ? "w-7 bg-white" : "bg-slate-200/40"
                 } h-2 w-2 transition-all duration-200 rounded-full cursor-pointer`}
               ></span>
             </div>
