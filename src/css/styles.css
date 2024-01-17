@@ -15,9 +15,16 @@
     opacity: 0;
   }
 }
-
+.arrows {
+   opacity: 0.3;
+   transition: all;
+   transition-duration: 300ms;
+}
+.arrows:hover {
+  opacity: 1;
+}
 .animated {
-  animation: scaleIn 2s infinite ease-in-out
+  animation: scaleIn 2s infinite ease-in-out;
 }
 .input-form {
   @apply p-2 border-slate-200 border-2 focus:outline-none rounded-lg px-4 mt-1;

@@ -25,32 +25,30 @@ const Carousel = ({ id }) => {
       setInView(3);
     }
   };
-  const style = { color: "white", fontSize: "1.5rem" };
+  const style = { color: "white", fontSize: "1.5rem"};
   return (
     <>
       <span
         onClick={toggleViewBackward}
         className="top-1/2 absolute z-40 bg-transparent rounded-full w-10 h-10 left-5 cursor-pointer flex justify-center items-center hover:scale-125 hover:-translate-x-1 transition-all duration-300 ease-in-out"
       >
-        <IoIosArrowBack style={style} />
+        <IoIosArrowBack style={style} className="arrows" />
       </span>
       <span
         onClick={toggleViewForward}
         className="absolute z-40 bg-transparent rounded-full w-10 h-10 top-1/2 right-5 cursor-pointer flex justify-center items-center hover:scale-125 hover:translate-x-1 transition-all duration-300 ease-in-out"
       >
-        <IoIosArrowForward style={style} />
+        <IoIosArrowForward style={style} className="arrows" />
       </span>
       {id === "5" && (
         <div className="z-50 md:hidden sm:hidden lg:flex absolute slide1">
           <Address id={id} />
         </div>
-        
       )}
       {id === "4" ? (
         <div className="z-50 md:hidden sm:hidden lg:flex absolute slide1">
           <Address id={id} />
         </div>
-        
       ) : (
         <div className="relative bg-blue lg:flex justify-center z-20 h-screen overflow-hidden md:hidden sm:hidden">
           <div
