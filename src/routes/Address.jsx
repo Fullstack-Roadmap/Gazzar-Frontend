@@ -18,14 +18,14 @@ const Address = ({ id }) => {
       </header>
       <div className="flex justify-center">
         <img
-          className="w-100 top-0 z-10 -right-6 absolute"
+          className="w-100 top-0 z-10 -right-0 absolute"
           src={pattern}
           alt=""
         />
         {id === "1" && <img className="z-20 w-2/3" src={picOne} />}
         {id === "2" && <img className="z-20 w-2/3" src={picTwo} />}
         {id === "3" && <img className="z-20 w-full" src={picThree} />}
-        {id === "4" && <img className="z-20 w-3/4 my-12" src={registerImg} />}
+        {id === "4" && <img className="z-20 w-4/5 my-8" src={registerImg} />}
         {id === "5" && <img className="z-20 w-2/3" src={picOne} />}
       </div>
       {id === "1" && (

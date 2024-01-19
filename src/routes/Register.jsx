@@ -72,7 +72,7 @@ const Register = () => {
   };
 
   return (
-    <div className="lg:flex">
+    <div className="lg:flex z-40">
       <div className="relative w-1/2">
         <Carousel id="4" />
       </div>
