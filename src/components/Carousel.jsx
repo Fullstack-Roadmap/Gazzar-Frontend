@@ -41,7 +41,7 @@ const Carousel = ({ id }) => {
         <IoIosArrowForward style={style} className="arrows" />
       </span>
       {id === "5" && (
-        <div className="z-50 md:hidden sm:hidden lg:flex absolute slide1">
+        <div className="z-50 md:hidden sm:hidden ipad:hidden lg:flex absolute slide1">
           <Address id={id} />
         </div>
       )}
