@@ -1,22 +1,40 @@
 import PropTypes from "prop-types";
 import { IoIosArrowForward } from "react-icons/io";
+import { useState } from "react";
 
-const Button = ({ text, textColor, buttonColor, hasArrow }) => {
-   const blue = "#083167";
+const Button = ({
+  text,
+  textLarge,
+  buttonColor,
+  hasArrow,
+  hasBorder,
+  textBlue,
+}) => {
+  const blue = "#083167";
+  const [isHover, setIsHover] = useState(false);
+
+  const toggleHover = () => {
+    setIsHover((current) => !current);
+  };
   return (
-    <button
-      className={`
-        px-8 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition-all duration-700
+    <button onMouseOver={toggleHover} onMouseLeave={toggleHover}
+      className={` ${hasBorder && "border-2 border-blue"} 
+${textBlue ? "text-blue" : "text-white"} ${
+        textLarge && "text-2xl py-5"
+      } px-8 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition-all duration-700
       `}
       style={{
         backgroundColor: buttonColor,
-        color: textColor,
         fontWeight: 500,
       }}
     >
       {text}
       {hasArrow && (
-        <div>
+        <div
+          className={`transition-all duration-500 ${
+            isHover && "translate-x-2"
+          }`}
+        >
           <IoIosArrowForward />
         </div>
       )}

@@ -20,7 +20,11 @@ const Navbar = () => {
       <section className="flex gap-4 items-center font-semibold">
         <div>
           <Link to="signin">
-            <Button text="Login" textColor={blue} buttonColor={lightBlue} />
+            <Button
+              text="Login"
+              buttonColor={lightBlue}
+              textBlue={true}
+            />
           </Link>
         </div>
         <div>
