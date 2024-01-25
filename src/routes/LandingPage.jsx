@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import LandingMidSection from "../components/LandingMidSection";
+import CreateStoreSection from "../components/CreateStoreSection";
 
 const LandingPage = () => {
   return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
         <Hero />
       </div>
       <LandingMidSection />
+      <CreateStoreSection />
     </div>
   );
 };

@@ -60,7 +60,7 @@ const Register = () => {
         });
     } catch (err) {
       if (err.response) {
-        errors = JSON.stringify(err.response.data.error);
+        const errors = JSON.stringify(err.response.data.error);
         console.error(errors);
         navigate("/register", {
           state: {
