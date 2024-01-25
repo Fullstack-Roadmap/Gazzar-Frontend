@@ -72,11 +72,11 @@ const Register = () => {
   };
 
   return (
-    <div className="lg:flex z-40">
-      <div className="relative w-1/2">
+    <div className="lg:flex">
+      <div className="relative w-1/2 z-30">
         <Carousel id="4" />
       </div>
-      <div className="z-40 h-screen flex justify-center items-center lg:w-1/2 lg:px-16">
+      <div className="z-50 h-screen flex justify-center items-center lg:w-1/2 lg:px-16">
         <div className="px-[1rem] md:px-[2rem] sm:border-none border-2 rounded-lg border-slate-200 sm:text-[0.55rem] text-[0.65rem] my-16 sm:mx-6 w-[35rem] md:w-[40rem] md:h-[40rem] lg:h-auto">
           <section className="flex flex-col justify-center items-center gap-3 md:gap-4 my-5">
             <h2 className="text-3xl font-bold text-center mb-3 w-full flex md:mt-4">
