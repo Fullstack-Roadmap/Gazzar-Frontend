@@ -9,7 +9,7 @@ const CreateStoreSection = () => {
         <header className="text-6xl font-bold leading-normal">
           Create <p>Your Own Online Store</p>
         </header>
-        <p className="text-2xl font-medium">
+        <p className="text-2xl font-medium leading-normal">
           Create an online store for your business, so users can easily see what
           you sell and buy products from you.
         </p>

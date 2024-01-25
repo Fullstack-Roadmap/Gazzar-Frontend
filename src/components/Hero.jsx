@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { IoIosArrowForward } from "react-icons/io";
+import Button from "./Button";
 
 const Hero = () => {
   const [isHover, setIsHover] = useState(false);
@@ -8,6 +8,7 @@ const Hero = () => {
   const toggleHover = () => {
     setIsHover((current) => !current);
   };
+  const blue = "#083167";
 
   return (
     <div className="m-20 ">
@@ -19,20 +20,12 @@ const Hero = () => {
         your online store in just 3 minutes.
       </p>
       <Link to="register">
-        <button
-          onMouseOver={toggleHover}
-          onMouseOut={toggleHover}
-          className="mt-8 px-8 py-5 rounded-xl flex items-center gap-3 bg-blue text-white text-2xl hover:scale-105 transition-all duration-300"
-        >
-          <span>Get Started</span>
-          <div
-            className={`transition-all duration-500 ${
-              isHover && "translate-x-2"
-            }`}
-          >
-            <IoIosArrowForward />
-          </div>
-        </button>
+        <Button
+          text="Get Started"
+          hasArrow={true}
+          buttonColor={blue}
+          textLarge={true}
+        />
       </Link>
     </div>
   );

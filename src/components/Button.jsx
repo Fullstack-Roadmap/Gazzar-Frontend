@@ -17,15 +17,17 @@ const Button = ({
     setIsHover((current) => !current);
   };
   return (
-    <button onMouseOver={toggleHover} onMouseLeave={toggleHover}
-      className={` ${hasBorder && "border-2 border-blue"} 
-${textBlue ? "text-blue" : "text-white"} ${
-        textLarge && "text-2xl py-5"
-      } px-8 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition-all duration-700
+    <button
+      onMouseOver={toggleHover}
+      onMouseLeave={toggleHover}
+      className={` ${hasBorder && " border-[1px] border-blue"}
+${textBlue ? "text-blue" : "text-white"} 
+${textLarge && "text-2xl py-5"} 
+      px-8 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition-all duration-700
       `}
       style={{
         backgroundColor: buttonColor,
-        fontWeight: 500,
+        fontWeight: 600,
       }}
     >
       {text}
