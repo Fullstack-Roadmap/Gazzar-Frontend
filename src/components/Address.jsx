@@ -47,7 +47,7 @@ const Address = ({ id }) => {
         </section>
       )}
       {id === "5" && (
-        <section className="text-3xl z-20">You’re all ready to go! </section>
+        <section className="text-3xl z-20">You’re all ready to go!</section>
       )}
 
       <div>
