@@ -1,11 +1,9 @@
-import React from "react";
 import pattern from "../assets/Pattern.svg";
 import picOne from "../assets/Frame 36166 (1).png";
 import picTwo from "../assets/Store Page (2).png"
 import picThree from "../assets/Group 227 (1).png";
 import registerImg from '../assets/registerPattern.svg'
 
-// Ready to take your business to the next level?
 const Address = ({ id }) => {
   return (
     <div
