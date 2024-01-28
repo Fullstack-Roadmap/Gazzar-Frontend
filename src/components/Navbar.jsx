@@ -6,7 +6,7 @@ const Navbar = () => {
   const lightBlue = "#1B73D326";
 
   return (
-    <nav className="sticky flex items-center mt-16 py-6 px-8 rounded-3xl h-fit w-full shadow-custom justify-between text-lg mx-20">
+    <nav className="sticky sm:hidden md:hidden lg:flex items-center mt-16 py-6 px-8 rounded-3xl h-fit w-full shadow-custom justify-between text-lg mx-20">
       <header className="text-2xl font-extrabold flex justify-center items-center gap-2 h-fit">
         <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722]"></span>
         <p>Gazzar.</p>
@@ -20,11 +20,7 @@ const Navbar = () => {
       <section className="flex gap-4 items-center font-semibold">
         <div>
           <Link to="signin">
-            <Button
-              text="Login"
-              buttonColor={lightBlue}
-              textBlue={true}
-            />
+            <Button text="Login" buttonColor={lightBlue} textBlue={true} />
           </Link>
         </div>
         <div>
