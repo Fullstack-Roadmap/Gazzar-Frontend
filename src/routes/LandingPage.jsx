@@ -7,7 +7,7 @@ import CreateStoreSection from "../components/CreateStoreSection";
 const LandingPage = () => {
   return (
     <div className="flex flex-col items-center h-[3600px] font-semibold text-xl overflow-hidden">
-      <div className="flex flex-col lg:items-center md:items-start mx-20">
+      <div className="flex flex-col items-center mx-20">
         <Navbar />
         <Hero />
       </div>
