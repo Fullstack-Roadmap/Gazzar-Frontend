@@ -7,6 +7,7 @@ import SignIn from "./routes/SignIn.jsx";
 import OTPVerification from "./routes/OTPVerification.jsx";
 import OTPVerified from "./routes/OTPVerified.jsx";
 import LandingPage from "./routes/LandingPage.jsx";
+import StoreFront from "./routes/StoreFront.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/otp-verified",
     element: <OTPVerified />,
+  },
+  {
+    path: "/storefront",
+    element: <StoreFront />,
   },
 ]);
 

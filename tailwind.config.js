@@ -22,6 +22,7 @@ export default {
       },
       colors: {
         blue: "#083167",
+        gray: "#DFDFDF"
       },
     },
     plugins: [],

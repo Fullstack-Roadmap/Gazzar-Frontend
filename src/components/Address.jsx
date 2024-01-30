@@ -3,6 +3,7 @@ import picOne from "../assets/Frame 36166 (1).png";
 import picTwo from "../assets/Store Page (2).png"
 import picThree from "../assets/Group 227 (1).png";
 import registerImg from '../assets/registerPattern.svg'
+import otpVerification from "../assets/otpVerification.svg"
 
 const Address = ({ id }) => {
   return (
@@ -24,7 +25,7 @@ const Address = ({ id }) => {
         {id === "2" && <img className="z-20 w-2/3" src={picTwo} />}
         {id === "3" && <img className="z-20 w-full" src={picThree} />}
         {id === "4" && <img className="z-20 w-4/5 my-8" src={registerImg} />}
-        {id === "5" && <img className="z-20 w-2/3" src={picOne} />}
+        {id === "5" && <img className="z-20 w-4/5" src={otpVerification} />}
       </div>
       {id === "1" && (
         <section className="text-3xl z-20 w-3/5">
@@ -45,7 +46,9 @@ const Address = ({ id }) => {
         </section>
       )}
       {id === "5" && (
-        <section className="text-3xl z-20">You’re all ready to go!</section>
+        <section className="text-3xl z-20 leading-relaxed -translate-y-16">
+          Hang on, <p>We're almost there</p>
+        </section>
       )}
 
       <div>

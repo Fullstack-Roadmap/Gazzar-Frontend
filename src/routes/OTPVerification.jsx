@@ -37,7 +37,7 @@ const OTPVerification = () => {
   return (
     <div className="lg:flex">
       <div className="relative w-1/2">
-        <Carousel id="4" />
+        <Carousel id="5" />
       </div>
 
       <div className="z-40 h-screen flex justify-center items-center lg:w-1/2 lg:px-12">
