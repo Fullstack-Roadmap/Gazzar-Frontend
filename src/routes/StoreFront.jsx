@@ -27,7 +27,14 @@ const StoreFront = () => {
         <p className=" mx-40 z-10 text-4xl font-bold w-1/4">
           I sell shoes, clothes, bags and other clothing accessories.
         </p>
-<Button text="Shop Now" buttonColor="" hasBorder={true} className="z-10"/>
+        <div className="flex justify-center items-center">
+          <Button
+            text="Shop Now"
+            buttonColor=""
+            hasBorder={true}
+            className="z-10"
+          />
+        </div>
         <img src={heroImg} alt="" className="opacity-40 absolute" />
       </section>
     </>
