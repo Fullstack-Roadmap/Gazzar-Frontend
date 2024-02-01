@@ -1,18 +1,18 @@
 import Button from "../components/Button";
-import storeFrontHeroPic from "../assets/storeFrontHeroPic.png"
-import profilePic from "../assets/profilePic.png"
-import ellipses from "../assets/svgs/ellipses.svg"
-import search from "../assets/svgs/search.svg"
+import storeFrontHeroPic from "../assets/storeFrontHeroPic.png";
+import profilePic from "../assets/profilePic.png";
+import ellipses from "../assets/svgs/ellipses.svg";
+import search from "../assets/svgs/search.svg";
 
 const StoreFront = () => {
   return (
     <>
       <nav className="flex justify-between items-center mx-40 my-7 font-semibold text-black/50">
         <img src={profilePic} className="w-12" alt="" />
-        <ul className="flex justify-center gap-7">
-          <li className="text-blue font-bold">Home</li>
-          <li>Products</li>
-          <li>Categories</li>
+        <ul className="flex justify-center gap-7 ">
+          <li className="text-blue font-bold cursor-pointer">Home</li>
+          <li className="cursor-pointer">Products</li>
+          <li className="cursor-pointer">Categories</li>
         </ul>
         <section className="flex justify-center items-center gap-3">
           <div className="bg-[#DFDFDF]/30 flex h-fit justify-start items-center py-3 px-5 rounded-lg gap-3 border-[1px] border-black/10 w-[300px]">
@@ -20,7 +20,7 @@ const StoreFront = () => {
             <input
               type="text"
               placeholder="Search or type"
-              className="bg-transparent w-[150px] focus:outline-none placeholder:text-sm"
+              className="bg-transparent w-[150px] focus:outline-none placeholder:text-sm text-black"
             />
           </div>
           <div className="rounded-full h-[3.25rem] aspect-square flex justify-center items-center border-[1px] border-gray">
