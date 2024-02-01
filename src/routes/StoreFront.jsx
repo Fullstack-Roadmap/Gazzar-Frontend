@@ -2,6 +2,8 @@ import heroImg from "../assets/temp/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg"
 import Button from "../components/Button";
 
 const StoreFront = () => {
+  const blue = "#083167";
+
   return (
     <>
       <nav className="flex justify-between items-center mx-40 my-7 font-semibold text-black/50">
@@ -23,19 +25,15 @@ const StoreFront = () => {
           <div className="rounded-full h-[3.25rem] aspect-square flex justify-center items-center border-[1px] border-gray"></div>
         </section>
       </nav>
-      <section className="flex flex-row justify-start items-center bg-blue text-white h-[520px] overflow-hidden relative">
-        <p className=" mx-40 z-10 text-4xl font-bold w-1/4">
+      <section className="flex flex-col justify-center items-start bg-blue text-white h-[520px] overflow-hidden relative gap-10">
+        <p className="mx-40 z-20 text-4xl font-bold w-1/4">
           I sell shoes, clothes, bags and other clothing accessories.
         </p>
-        <div className="flex justify-center items-center">
-          <Button
-            text="Shop Now"
-            buttonColor=""
-            hasBorder={true}
-            className="z-10"
-          />
+        <div className="mx-40">
+          <Button text="Shop Now" borderWhite={true} customClasses="px-12" className="z-20" />
         </div>
-        <img src={heroImg} alt="" className="opacity-40 absolute" />
+
+        <img src={heroImg} alt="" className="z-10 opacity-40 absolute" />
       </section>
     </>
   );

@@ -4,11 +4,13 @@ import { useState } from "react";
 
 const Button = ({
   text,
+  textBlue,
   textLarge,
   buttonColor,
   hasArrow,
   hasBorder,
-  textBlue,
+  borderWhite,
+  customClasses,
 }) => {
   const blue = "#083167";
   const [isHover, setIsHover] = useState(false);
@@ -20,9 +22,12 @@ const Button = ({
     <button
       onMouseOver={toggleHover}
       onMouseLeave={toggleHover}
-      className={` ${hasBorder && " border-[1px] border-blue"}
+      className={`
+${hasBorder && "border-2 border-blue"}
 ${textBlue ? "text-blue" : "text-white"} 
 ${textLarge && "text-2xl py-5"} 
+${borderWhite && "border-2 border-white"}
+${customClasses && `${customClasses}`}
       px-8 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition-all duration-700
       `}
       style={{
@@ -45,15 +50,22 @@ ${textLarge && "text-2xl py-5"}
 };
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  textColor: PropTypes.string,
+  textBlue: PropTypes.string,
+  textLarge: PropTypes.string,
   buttonColor: PropTypes.string,
   hasArrow: PropTypes.bool,
+  hasBorder: PropTypes.bool,
+  borderWhite: PropTypes.bool,
+  customClasses: PropTypes.string,
 };
 
 Button.defaultProps = {
   textColor: "white",
-  buttonColor: "green",
+  buttonColor: "transparent",
   hasArrow: false,
+  hasBorder: true,
+  borderWhite: false,
+  customClasses: false,
 };
 
 export default Button;
