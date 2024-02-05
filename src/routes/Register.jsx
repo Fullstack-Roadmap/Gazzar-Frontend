@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Carousel from "../components/Carousel";
-import { useEffect } from "react";
 
 const Register = () => {
   const navigate = useNavigate();

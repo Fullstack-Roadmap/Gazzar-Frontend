@@ -38,7 +38,8 @@ const Navbar = () => {
       <section className="gap-4 items-center font-semibold flex justify-end">
         <div className="hidden lg:flex">
           <Link to="signin">
-            <Button text="Login" buttonColor={lightBlue} textBlue={true} />
+            <Button text="Login" buttonColor={lightBlue} textBlue={true} hasBorder=
+              { false} />
           </Link>
         </div>
         <div className="hidden lg:flex">
