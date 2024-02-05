@@ -18,7 +18,7 @@ const OTPVerification = () => {
     } else {
       try {
         const res = await axios.post(
-          "https://gazzar-api.onrender.com.gazzar-v1/auth/verify-otp",
+          "https://gazzar-api.onrender.com.gazzar/v1/auth/verify-otp",
           {
             email: email,
             otp: otp,
