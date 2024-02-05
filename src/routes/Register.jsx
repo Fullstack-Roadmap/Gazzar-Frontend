@@ -8,9 +8,6 @@ import Carousel from "../components/Carousel";
 import { useEffect } from "react";
 
 const Register = () => {
-  useEffect(() => {
-    window.history.replaceState({}, "");
-  }, []);
   const navigate = useNavigate();
   const location = useLocation();
   const schema = yup.object().shape({
