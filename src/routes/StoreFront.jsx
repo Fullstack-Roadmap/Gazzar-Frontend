@@ -5,6 +5,7 @@ import ellipses from "../assets/svgs/ellipses.svg";
 import search from "../assets/svgs/search.svg";
 
 const StoreFront = () => {
+
   return (
     <>
       <nav className="flex justify-between items-center mx-40 my-7 font-semibold text-black/50">
@@ -42,6 +43,23 @@ const StoreFront = () => {
 
         <img src={storeFrontHeroPic} alt="" className="z-10 absolute" />
       </section>
+      <nav>
+        <ul className="flex mx-40 my-[4.5rem] gap-3 text-xs">
+          <li className="bg-[#083167] px-6 py-4 text-white rounded-lg">
+            All (74)
+          </li>
+          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg">
+            Shoes
+          </li>
+          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg">
+            Clothes
+          </li>
+          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg">
+            Bags
+          </li>
+        </ul>
+      </nav>
+      <ul></ul>
     </>
   );
 };
