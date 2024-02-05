@@ -2,14 +2,16 @@ import productPic from "../assets/temp/maksim-larin-NOpsC3nWTzY-unsplash.jpg";
 
 const Product = () => {
   return (
-    <div className="border-2 rounded-lg p-3 border-gray flex flex-col justify-center items-center">
-      <img src={productPic} alt="" className="w-40 rounded-lg" />
-      <p className="text-sm font-semibold">Nike sneakers</p>
-      <p className="w-1/2">
+    <div className="border-[1px] rounded-lg p-4 border-gray flex flex-col justify-center items-start w-60 gap-2">
+      <img src={productPic} className="rounded-lg" />
+      <p className="px-1 text-xs font-bold mt-2">Nike sneakers</p>
+      <p className="px-1 text-[0.65rem]">
         Top quality sneakers, colour red, nike, hot and sleek, 8th edition sales
       </p>
-      <p className="text-blue text-lg font-bold">N20,600</p>
-      <button className="bg-[#083167] px-12 py-4 text-white rounded-lg font-semibold">Add to cart</button>
+      <p className="px-1 text-blue text-2xl font-semibold">N20,600</p>
+      <button className="py-4 bg-[#083167] w-full text-white rounded-lg font-medium text-sm">
+        Add to cart
+      </button>
     </div>
   );
 };
