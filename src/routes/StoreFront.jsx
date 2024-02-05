@@ -3,9 +3,10 @@ import storeFrontHeroPic from "../assets/storeFrontHeroPic.png";
 import profilePic from "../assets/profilePic.png";
 import ellipses from "../assets/svgs/ellipses.svg";
 import search from "../assets/svgs/search.svg";
+import Product from "../components/Product";
 
 const StoreFront = () => {
-
+  var products = [1,2,3,4,5,6,7,8];
   return (
     <>
       <nav className="flex justify-between items-center mx-40 my-7 font-semibold text-black/50">
@@ -44,7 +45,7 @@ const StoreFront = () => {
         <img src={storeFrontHeroPic} alt="" className="z-10 absolute" />
       </section>
       <nav>
-        <ul className="flex mx-40 my-[4.5rem] gap-3 text-xs">
+        <ul className="flex mx-40 mt-[4.5rem] gap-3 text-xs font-medium">
           <li className="bg-[#083167] px-6 py-4 text-white rounded-lg">
             All (74)
           </li>
@@ -59,7 +60,13 @@ const StoreFront = () => {
           </li>
         </ul>
       </nav>
-      <ul></ul>
+      <ul className="w-full flex flex-wrap gap-10 mx-40 mt-12">
+        {products.map(() => (
+          <li className="">
+            <Product />
+          </li>
+        ))}
+      </ul>
     </>
   );
 };
