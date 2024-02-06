@@ -62,7 +62,7 @@ const StoreFront = () => {
       </nav>
       <ul className="flex flex-wrap gap-10 w-full mx-36 mt-12">
         {products.map(() => (
-          <li className="">
+          <li className="shadow-custom">
             <Product />
           </li>
         ))}
