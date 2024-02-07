@@ -19,12 +19,13 @@ const Button = ({
     setIsHover((current) => !current);
   };
   return (
+    <div className="text-white">
     <button
       onMouseOver={toggleHover}
       onMouseLeave={toggleHover}
       className={`
 ${hasBorder && "border-2 border-blue"}
-${textBlue ? "text-blue" : "text-white"} 
+${textBlue && "text-blue"} 
 ${textLarge && "text-2xl py-5"} 
 ${borderWhite && "border-2 border-white"}
 ${customClasses && `${customClasses}`}
@@ -45,7 +46,7 @@ ${customClasses && `${customClasses}`}
           <IoIosArrowForward />
         </div>
       )}
-    </button>
+    </button></div>
   );
 };
 Button.propTypes = {

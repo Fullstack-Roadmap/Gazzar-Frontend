@@ -11,6 +11,11 @@ const OTPVerification = () => {
   const [otpError, setOtpError] = useState("");
   const email = location.state?.email;
 
+  const form = {
+    email,
+    otp,
+  };
+
   const handleSubmit = async () => {
     if (otp.length < 4) {
       setOtpError("Invalid input");
@@ -18,13 +23,10 @@ const OTPVerification = () => {
     } else {
       try {
         const res = await axios.post(
-          "https://gazzar-api.onrender.com.gazzar-v1/auth/verify-otp",
-          {
-            email: email,
-            otp: otp,
-          }
+          "https://gazzar-api.onrender.com.gazzar/v1/auth/verify-otp",
+          form
         );
-        if (!res) return;
+        // if (!res) return;
         navigate("/otp-verified");
       } catch (error) {
         console.log(error);

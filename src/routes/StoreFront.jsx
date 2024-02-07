@@ -3,12 +3,14 @@ import storeFrontHeroPic from "../assets/storeFrontHeroPic.png";
 import profilePic from "../assets/profilePic.png";
 import ellipses from "../assets/svgs/ellipses.svg";
 import search from "../assets/svgs/search.svg";
+import Product from "../components/Product";
 
 const StoreFront = () => {
+  var products = [1,2,3,4,5,6,7,8];
   return (
-    <>
-      <nav className="flex justify-between items-center mx-40 my-7 font-semibold text-black/50">
-        <img src={profilePic} className="w-12" alt="" />
+    <body className="overflow-hidden">
+      <nav className="flex justify-between items-center mx-36 my-7 font-semibold text-black/50">
+        <img src={profilePic} className="w-14" alt="" />
         <ul className="flex justify-center gap-7 ">
           <li className="text-blue font-bold cursor-pointer">Home</li>
           <li className="cursor-pointer">Products</li>
@@ -29,10 +31,10 @@ const StoreFront = () => {
         </section>
       </nav>
       <section className="flex flex-col justify-center items-start text-white h-[520px] overflow-hidden relative gap-10">
-        <p className="mx-40 z-20 text-6xl font-extrabold w-[53%] leading-[1.4]">
+        <p className="mx-36 z-20 text-6xl font-extrabold w-[53%] leading-[1.4]">
           I sell shoes, clothes, bags and other clothing accessories.
         </p>
-        <div className="mx-40 z-20">
+        <div className="mx-36 z-20">
           <Button
             text="Shop Now"
             borderWhite={true}
@@ -42,7 +44,30 @@ const StoreFront = () => {
 
         <img src={storeFrontHeroPic} alt="" className="z-10 absolute" />
       </section>
-    </>
+      <nav>
+        <ul className="flex mx-36 mt-[4.5rem] gap-3 text-xs font-medium">
+          <li className="bg-[#083167] px-6 py-4 text-white rounded-lg">
+            All (74)
+          </li>
+          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg">
+            Shoes
+          </li>
+          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg">
+            Clothes
+          </li>
+          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg">
+            Bags
+          </li>
+        </ul>
+      </nav>
+      <ul className="flex flex-wrap gap-10 w-full mx-36 mt-12">
+        {products.map(() => (
+          <li className="shadow-custom">
+            <Product />
+          </li>
+        ))}
+      </ul>
+    </body>
   );
 };
 

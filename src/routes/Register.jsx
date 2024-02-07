@@ -9,7 +9,6 @@ import Carousel from "../components/Carousel";
 const Register = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  var problem;
   const schema = yup.object().shape({
     name: yup.string().required("required"),
     businessName: yup.string().required("required"),
