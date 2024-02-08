@@ -88,7 +88,7 @@ const StoreFront = () => {
             <input
               type="text"
               placeholder="Search or type"
-              className="bg-transparent w-[150px] focus:outline-none placeholder:text-sm text-black"
+              className="bg-transparent w-[150px] sm:w-[120px] md:w-[250px] focus:outline-none placeholder:text-sm text-black"
             />
           </div>
           <div
@@ -100,14 +100,14 @@ const StoreFront = () => {
         </section>
       </nav>
       <section className="flex flex-col justify-center items-start text-white lg:h-[520px] md:h-[480px] sm:h-[320px] overflow-hidden relative gap-10 sm:gap-5">
-        <p className="lg:mx-36 md:mx-20 sm:mx-10 z-20 lg:text-6xl md:text-5xl sm:text-3xl font-extrabold w-[53%] sm:w-3/4 leading-[1.4]">
+        <p className="lg:mx-36 md:mx-20 sm:mx-10 z-20 lg:text-6xl md:text-5xl sm:text-3xl font-extrabold lg:w-[53%] sm:w-3/4 md:w-3/4 leading-[1.4]">
           I sell shoes, clothes, bags and other clothing accessories.
         </p>
         <div className="lg:mx-36 md:mx-20 sm:mx-10 z-20">
           <Button
             text="Shop Now"
             borderWhite={true}
-            customClasses="md:px-8 md:py-2 md:text-lg lg:px-16 lg:py-4 lg:text-xl"
+            customClasses="md:px-14 md:py-4 md:text-lg lg:px-16 lg:py-4 lg:text-xl"
           />
         </div>
 
