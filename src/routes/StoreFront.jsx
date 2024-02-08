@@ -12,12 +12,9 @@ const StoreFront = () => {
   const toggleMenu = () => {
     setMenuState(!menuState);
   };
-   const [navLinkState, setNavLinkState] = useState(0);
-   const toggleNavLink = (id) => {
-     setNavLinkState(id);
-   };
-  const getNumberOfCategories = () => {
-    // get number of vendor's categories and set it to a variable
+  const [navLinkState, setNavLinkState] = useState(0);
+  const toggleNavLink = (id) => {
+    setNavLinkState(id);
   };
   const [categoryState, setCategoryState] = useState(0);
   const toggleCategory = (id) => {
