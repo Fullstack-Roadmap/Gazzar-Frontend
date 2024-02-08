@@ -8,6 +8,7 @@ import OTPVerification from "./routes/OTPVerification.jsx";
 import OTPVerified from "./routes/OTPVerified.jsx";
 import LandingPage from "./routes/LandingPage.jsx";
 import StoreFront from "./routes/StoreFront.jsx";
+import ProductDescription from "./routes/ProductDescription.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/storefront",
     element: <StoreFront />,
+  },
+  {
+    path: "/product-description",
+    element: <ProductDescription />,
   },
 ]);
 
