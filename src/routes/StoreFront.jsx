@@ -51,9 +51,36 @@ const StoreFront = () => {
           >
             X
           </li>
-          <li className="text-blue font-bold cursor-pointer">Home</li>
-          <li className="cursor-pointer">Products</li>
-          <li className="cursor-pointer">Categories</li>
+          <li
+            className={`${
+              navLinkState == 0 && "text-blue font-bold "
+            } cursor-pointer`}
+            onClick={() => {
+              toggleNavLink(0);
+            }}
+          >
+            Home
+          </li>
+          <li
+            className={`${
+              navLinkState == 1 && "text-blue font-bold "
+            } cursor-pointer`}
+            onClick={() => {
+              toggleNavLink(1);
+            }}
+          >
+            Products
+          </li>
+          <li
+            className={`${
+              navLinkState == 2 && "text-blue font-bold "
+            } cursor-pointer`}
+            onClick={() => {
+              toggleNavLink(2);
+            }}
+          >
+            Categories
+          </li>
         </ul>
         <section className="flex justify-center items-center gap-3">
           <div className="bg-[#DFDFDF]/30 flex h-fit justify-start items-center py-3 px-5 rounded-lg gap-3 border-[1px] border-black/10 w-[300px] sm:w-[200px]">
@@ -103,7 +130,9 @@ const StoreFront = () => {
         </li>
         <li
           className={`${
-            categoryState == 1 ? "bg-blue text-white" : "bg-[#DFDFDF] text-black/60"
+            categoryState == 1
+              ? "bg-blue text-white"
+              : "bg-[#DFDFDF] text-black/60"
           } bg-[#DFDFDF] px-6 py-4 rounded-lg cursor-pointer ease-in-out`}
           onClick={() => {
             toggleCategory(1);
@@ -113,7 +142,9 @@ const StoreFront = () => {
         </li>
         <li
           className={`${
-            categoryState == 2 ? "bg-blue text-white" : "text-black/60 bg-[#DFDFDF]"
+            categoryState == 2
+              ? "bg-blue text-white"
+              : "text-black/60 bg-[#DFDFDF]"
           } bg-[#DFDFDF] px-6 py-4 rounded-lg cursor-pointer ease-in-out`}
           onClick={() => {
             toggleCategory(2);
@@ -123,7 +154,9 @@ const StoreFront = () => {
         </li>
         <li
           className={`${
-            categoryState == 3 ? "bg-blue text-white" : "bg-[#DFDFDF] text-black/60"
+            categoryState == 3
+              ? "bg-blue text-white"
+              : "bg-[#DFDFDF] text-black/60"
           } bg-[#DFDFDF] px-6 py-4  rounded-lg cursor-pointer ease-in-out`}
           onClick={() => {
             toggleCategory(3);
