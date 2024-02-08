@@ -22,6 +22,7 @@ const OTPVerification = () => {
       return;
     } else {
       try {
+        console.log(form);
         const res = await axios.post(
           "https://gazzar-api.onrender.com.gazzar/v1/auth/verify-otp",
           form
@@ -53,7 +54,7 @@ const OTPVerification = () => {
             </span>
             <OTPField
               otpValue={(v) => {
-                setOtp(v);
+                setOtp(Number(v));
               }}
             />
             <footer className="p-4 font-bold text-xs text-slate-900/70 flex gap-1">
