@@ -18,7 +18,7 @@ const Navbar = () => {
   };  
 
   return (
-    <nav className="sticky lg:flex items-center mid:mt-16 mt-2 py-6 px-8 mid:rounded-3xl rounded-none shadow-none border-b border-[#EAECF0] h-fit w-full mid:shadow-custom justify-between text-lg mx-20">
+    <nav className="sticky lg:flex items-center mid:mt-16 mt-2 py-6 px-8 mid:rounded-3xl rounded-none shadow-none border-b border-[#EAECF0] h-fit w-full mid:shadow-custom justify-between text-lg sml:mx-20 mx-12">
       <section className="flex justify-between items-center">
         <header className="text-2xl font-extrabold flex items-center gap-2 h-fit">
           <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722]"></span>
