@@ -11,21 +11,21 @@ const StoreFront = () => {
   const toggleMenu = () => {
     setMenuState(!menuState);
   };
-  const exitMenu = () => {
-    setMenuState(false);
-  };
   var products = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <body className="overflow-hidden">
-      {!menuState && (
-        <li className="z-30 w-screen h-screen backdrop-blur-sm absolute lg:hidden"></li>
+      {menuState && (
+        <li
+          className="z-30 w-screen h-screen backdrop-blur-sm absolute lg:hidden"
+          onClick={toggleMenu}
+        ></li>
       )}
       <nav className="flex justify-between items-center lg:mx-36 md:mx-20 my-7 font-semibold text-black/50 sm:justify-around">
         <img src={profilePic} className="w-14" alt="profilePic" />
 
         <ul
           className={`sm:flex-col md:flex-col lg:flex-row fixed lg:static flex justify-center items-center lg:gap-7 lg:bg-transparent bg-slate-200 top-0 right-0 p-10 w-3/4 lg:h-fit h-screen z-30 lg:text-base text-3xl sm:text-xl gap-16 transition-all duration-300 ease-in-out ${
-            menuState && "translate-x-[80vw]"
+            !menuState && "translate-x-[80vw]"
           }`}
         >
           <li
@@ -55,7 +55,7 @@ const StoreFront = () => {
           </div>
         </section>
       </nav>
-      <section className="flex flex-col justify-center items-start text-white h-[520px] overflow-hidden relative gap-10 sm:gap-5">
+      <section className="flex flex-col justify-center items-start text-white lg:h-[520px] md:h-[480px] sm:h-[320px] overflow-hidden relative gap-10 sm:gap-5">
         <p className="lg:mx-36 md:mx-20 sm:mx-10 z-20 lg:text-6xl md:text-5xl sm:text-3xl font-extrabold w-[53%] sm:w-3/4 leading-[1.4]">
           I sell shoes, clothes, bags and other clothing accessories.
         </p>
