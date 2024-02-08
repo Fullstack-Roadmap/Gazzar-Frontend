@@ -11,6 +11,21 @@ export default {
 
       lg: "1200px",
       // => @media (min-width: 1440px) { ... }
+
+      'sml': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'mid': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lrg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xlrg': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xlrg': '1536px',
+      // => @media (min-width: 1536px) { ... }
     },
 
     fontFamily: {
