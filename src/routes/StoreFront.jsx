@@ -7,18 +7,30 @@ import Product from "../components/Product";
 import { useState } from "react";
 
 const StoreFront = () => {
+  var products = [...Array(8).keys()];
   const [menuState, setMenuState] = useState(false);
   const toggleMenu = () => {
     setMenuState(!menuState);
   };
-  var products = [1, 2, 3, 4, 5, 6, 7, 8];
+   const [navLinkState, setNavLinkState] = useState(0);
+   const toggleNavLink = (id) => {
+     setNavLinkState(id);
+   };
+  const getNumberOfCategories = () => {
+    // get number of vendor's categories and set it to a variable
+  };
+  const [categoryState, setCategoryState] = useState(0);
+  const toggleCategory = (id) => {
+    setCategoryState(id);
+  };
+
   return (
     <body className="overflow-hidden">
       {menuState && (
-        <li
+        <div
           className="z-30 w-screen h-screen backdrop-blur-sm absolute lg:hidden"
           onClick={toggleMenu}
-        ></li>
+        ></div>
       )}
       <nav className="flex justify-between items-center lg:mx-36 md:mx-20 sm:my-6 md:my-6 lg:my-0 font-semibold text-black/50 sm:justify-around">
         <img
@@ -76,25 +88,53 @@ const StoreFront = () => {
           <img src={storeFrontHeroPic} alt="heroPic" className="object-cover" />
         </div>
       </section>
-      <nav>
-        <ul className="justify-start flex-wrap flex lg:mx-36 md:mx-20 sm:mx-10 sm:mt-[4.5rem] md:mt-12 gap-3 text-xs font-medium">
-          <li className="bg-[#083167] px-6 py-4 text-white rounded-lg cursor-pointer">
-            All (74)
-          </li>
-          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg cursor-pointer">
-            Shoes
-          </li>
-          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg cursor-pointer">
-            Clothes
-          </li>
-          <li className="bg-[#DFDFDF] px-6 py-4 text-[6D6D6D] rounded-lg cursor-pointer">
-            Bags
-          </li>
-        </ul>
-      </nav>
-      <ul className="flex flex-wrap justify-center items-center gap-10 w-full mt-12 px-10">
+      <ul className="justify-start flex-wrap flex lg:mx-36 md:mx-20 sm:mx-10 sm:mt-[4.5rem] md:mt-12 lg:mt-20 gap-3 text-xs font-medium">
+        <li
+          className={`${
+            categoryState == 0
+              ? "bg-blue text-white"
+              : "bg-[#DFDFDF] text-black/60"
+          } px-6 py-4 rounded-lg cursor-pointer transition-all ease-in-out`}
+          onClick={() => {
+            toggleCategory(0);
+          }}
+        >
+          All (74)
+        </li>
+        <li
+          className={`${
+            categoryState == 1 ? "bg-blue text-white" : "bg-[#DFDFDF] text-black/60"
+          } bg-[#DFDFDF] px-6 py-4 rounded-lg cursor-pointer ease-in-out`}
+          onClick={() => {
+            toggleCategory(1);
+          }}
+        >
+          Shoes
+        </li>
+        <li
+          className={`${
+            categoryState == 2 ? "bg-blue text-white" : "text-black/60 bg-[#DFDFDF]"
+          } bg-[#DFDFDF] px-6 py-4 rounded-lg cursor-pointer ease-in-out`}
+          onClick={() => {
+            toggleCategory(2);
+          }}
+        >
+          Clothes
+        </li>
+        <li
+          className={`${
+            categoryState == 3 ? "bg-blue text-white" : "bg-[#DFDFDF] text-black/60"
+          } bg-[#DFDFDF] px-6 py-4  rounded-lg cursor-pointer ease-in-out`}
+          onClick={() => {
+            toggleCategory(3);
+          }}
+        >
+          Bags
+        </li>
+      </ul>
+      <ul className="flex flex-wrap justify-center items-center gap-10 w-full mt-12 mb-24 px-10">
         {products.map(() => (
-          <li className="shadow-custom">
+          <li>
             <Product />
           </li>
         ))}
