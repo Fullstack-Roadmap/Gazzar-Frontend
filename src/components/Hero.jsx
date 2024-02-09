@@ -10,7 +10,7 @@ const Hero = () => {
       <h1 className="mid:mt-10 mid:mb-0 mb-16 mid:text-6xl mid:text-left font-bold mid:w-2/3 leading-normal text-5xl text-center">
         Manage your business more efficiently.
       </h1>
-      <p className="my-5 text-2xl font-medium mid:w-2/3 mid:text-left leading-relaxed">
+      <p className="my-8 text-2xl font-normal mid:w-2/3 mid:text-left leading-relaxed">
         Gazzar helps you analyze and keep track of your business growth. Setup
         your online store in just 3 minutes.
       </p>
