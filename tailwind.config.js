@@ -12,6 +12,9 @@ export default {
       lg: "1200px",
       // => @media (min-width: 1440px) { ... }
 
+      'xs': '425px',
+      // => @media (min-width: 480px) { ... }
+
       'sml': '640px',
       // => @media (min-width: 640px) { ... }
 
