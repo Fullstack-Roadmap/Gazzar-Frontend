@@ -29,11 +29,13 @@ const Navbar = () => {
           <FaX size={26} className="hidden" onClick={toggleNav} id="close"/>
         </div>
       </section>
-      <section className="lg:flex lg:flex-row lg:border-0 lg:mx-2 lg:mt-0 lg:pt-0 gap-6 mt-4 pt-4 border-t border-[#EAECF0] items-center justify-center hidden flex-col" id="options">
-        <p>Features</p>
-        <p>Company</p>
-        <p>Pricing</p>
-        <p>Learn</p>
+      <section className="lrg:block absolute">
+        <section className="lg:flex lg:flex-row lg:border-0 lg:mx-2 lg:mt-0 lg:pt-0 gap-6 mt-4 pt-4 border-t border-[#EAECF0] items-center justify-center hidden flex-col relative" id="options">
+          <p>Features</p>
+          <p>Company</p>
+          <p>Pricing</p>
+          <p>Learn</p>
+        </section>
       </section>
       <section className="gap-4 items-center font-semibold flex justify-end">
         <div className="hidden lg:flex">

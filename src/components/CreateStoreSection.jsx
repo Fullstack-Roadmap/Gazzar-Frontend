@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const CreateStoreSection = () => {
   return (
-    <div className="h-screen w-5/6 shadow-custom my-20 lrg:my-40 flex justify-between items-center px-8 py-10 pt-4 pr-0 mid:pl-8 pl-0 rounded-2xl">
+    <div className="mt-[10rem] lrg:h-screen w-5/6 shadow-custom my-20 lrg:my-40 flex justify-between items-center px-8 py-10 pt-4 pr-0 mid:pl-8 pl-0 rounded-2xl">
       <div className="w-[110vw] h-full bg-blue rounded-2xl hidden mid:block"></div>
       <div className="p-12 sml:p-20 xs:pt-10 mid:p-10 lrg:p-20 lrg:pt-20 flex justify-center items-start flex-col gap-8 mid:gap-12">
         <header className="text-4xl xs:text-[2.5rem] sml:text-5xl lrg:text-6xl font-bold mid:leading-normal">
