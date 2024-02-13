@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
 import OTPField from "../components/OTPField";
 import axios from "axios";
@@ -11,10 +11,14 @@ const OTPVerification = () => {
   const [otpError, setOtpError] = useState("");
   const email = location.state?.email;
 
-  const form = {
-    email,
-    otp,
-  };
+  const [form, setForm] = useState({
+    email: email,
+    otp: "",
+  });
+
+  useEffect(() => {
+    setForm({ ...form, otp: otp });
+  }, [otp])
 
   const handleSubmit = async () => {
     if (otp.length < 4) {
@@ -22,12 +26,13 @@ const OTPVerification = () => {
       return;
     } else {
       try {
+        console.log(otp)
         console.log(form);
         const res = await axios.post(
           "https://gazzar-api.onrender.com.gazzar/v1/auth/verify-otp",
           form
         );
-        // if (!res) return;
+        if (!res) return;
         navigate("/otp-verified");
       } catch (error) {
         console.log(error);
@@ -54,7 +59,7 @@ const OTPVerification = () => {
             </span>
             <OTPField
               otpValue={(v) => {
-                setOtp(Number(v));
+                setOtp(String(v));
               }}
             />
             <footer className="p-4 font-bold text-xs text-slate-900/70 flex gap-1">
