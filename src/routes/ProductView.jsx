@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/Navbar";
 
 const ProductView = () => {
-  return (
-    <div>ProductView</div>
-  )
-}
+  return <Navbar />;
+};
 
-export default ProductView
+export default ProductView;

@@ -16,27 +16,27 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: "/register",
+    path: "register",
     element: <Register />,
   },
   {
-    path: "/signin",
+    path: "signin",
     element: <SignIn />,
   },
   {
-    path: "/otp-verification",
+    path: "otp-verification",
     element: <OTPVerification />,
   },
   {
-    path: "/otp-verified",
+    path: "otp-verified",
     element: <OTPVerified />,
   },
   {
-    path: "/storefront",
+    path: "storefront",
     element: <StoreFront />,
   },
   {
-    path: "/product-view",
+    path: "product-view",
     element: <ProductView />,
   },
 ]);
