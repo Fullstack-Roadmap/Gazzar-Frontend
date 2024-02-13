@@ -40,7 +40,9 @@ export default {
       },
       colors: {
         blue: "#083167",
-        gray: "#DFDFDF"
+        gray: "#DFDFDF",
+        outlinegray: "#D9D9D9",
+        navyblue: "#CED6E1"
       },
     },
     plugins: [],
