@@ -9,6 +9,7 @@ import OTPVerified from "./routes/OTPVerified.jsx";
 import LandingPage from "./routes/LandingPage.jsx";
 import StoreFront from "./routes/StoreFront.jsx";
 import ProductDescription from "./routes/ProductDescription.jsx";
+import Cart from "./routes/Cart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/product-description",
     element: <ProductDescription />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
 ]);
 
