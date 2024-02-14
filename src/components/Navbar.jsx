@@ -18,7 +18,7 @@ const Navbar = () => {
   };  
 
   return (
-    <nav className="sticky lg:flex items-center mt-16 py-6 px-8 rounded-3xl [@media(max-width:768px)]:rounded-none [@media(max-width:768px)]:shadow-none [@media(max-width:768px)]:border-b [@media(max-width:768px)]:border-[#EAECF0] h-fit w-full shadow-custom justify-between text-lg mx-20">
+    <nav className="lg:flex items-center py-6 px-8 mid:rounded-3xl rounded-none shadow-none border-b border-[#EAECF0] h-fit mid:shadow-custom justify-between text-lg absolute top-12 mid:top-16 left-10 right-10 bg-white">
       <section className="flex justify-between items-center">
         <header className="text-2xl font-extrabold flex items-center gap-2 h-fit">
           <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722]"></span>
@@ -29,12 +29,14 @@ const Navbar = () => {
           <FaX size={26} className="hidden" onClick={toggleNav} id="close"/>
         </div>
       </section>
-      <section className="lg:flex lg:flex-row lg:border-0 lg:mx-2 lg:mt-0 lg:pt-0 gap-6 mt-4 pt-4 border-t border-[#EAECF0] items-center justify-center hidden flex-col" id="options">
-        <p>Features</p>
-        <p>Company</p>
-        <p>Pricing</p>
-        <p>Learn</p>
-      </section>
+      {/* <section className="lrg:block absolute"> */}
+        <section className="lg:flex lg:flex-row lg:border-0 lg:mx-2 lg:mt-0 lg:pt-0 gap-6 mt-4 pt-4 border-t border-[#EAECF0] items-center justify-center hidden flex-col relative" id="options">
+          <p>Features</p>
+          <p>Company</p>
+          <p>Pricing</p>
+          <p>Learn</p>
+        </section>
+      {/* </section> */}
       <section className="gap-4 items-center font-semibold flex justify-end">
         <div className="hidden lg:flex">
           <Link to="signin">

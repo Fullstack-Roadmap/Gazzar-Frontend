@@ -6,11 +6,11 @@ const Hero = () => {
   const blue = "#083167";
 
   return (
-    <div className="m-20">
-      <h1 className="mt-10 text-6xl font-bold w-2/3 leading-normal">
+    <div className="mid:m-20 mx-16 my-20 mt-[12rem] mid:mt-[14rem]">
+      <h1 className="mid:mt-10 mid:mb-0 mb-16 mid:text-6xl mid:text-left font-bold lrg:w-2/3 leading-normal text-5xl text-center">
         Manage your business more efficiently.
       </h1>
-      <p className="my-5 text-2xl font-medium w-2/3 leading-relaxed">
+      <p className="my-8 text-2xl font-normal mid:w-2/3 mid:text-left leading-relaxed">
         Gazzar helps you analyze and keep track of your business growth. Setup
         your online store in just 3 minutes.
       </p>
