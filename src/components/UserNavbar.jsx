@@ -88,6 +88,7 @@ const UserNavbar = () => {
           </div>
         </section>
       </nav>
+      <span className="w-full bg-gray h-[2px] flex"></span>
     </div>
   );
 };

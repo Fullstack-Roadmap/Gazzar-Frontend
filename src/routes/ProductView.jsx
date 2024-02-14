@@ -1,8 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import UserNavbar from "../components/UserNavbar";
 
 const ProductView = () => {
-  return <Navbar />;
+  return (
+    <div>
+      <UserNavbar />
+    </div>
+  );
 };
 
 export default ProductView;
