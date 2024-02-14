@@ -1,9 +1,8 @@
-import axios from "axios";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "../css/styles.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 
 const SignIn = () => {
@@ -63,7 +62,7 @@ const SignIn = () => {
                   <p className="text-red-600 font-normal">
                     {errors.password?.message}
                   </p>
-                </div>{" "}
+                </div>
                 <input
                   type="password"
                   className="input-form placeholder:font-normal placeholder:opacity-40"

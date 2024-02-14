@@ -8,7 +8,7 @@ import OTPVerification from "./routes/OTPVerification.jsx";
 import OTPVerified from "./routes/OTPVerified.jsx";
 import LandingPage from "./routes/LandingPage.jsx";
 import StoreFront from "./routes/StoreFront.jsx";
-import ProductDescription from "./routes/ProductDescription.jsx";
+import ProductView from "./routes/ProductView.jsx";
 import Cart from "./routes/Cart.jsx";
 
 const router = createBrowserRouter([
@@ -17,28 +17,28 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: "/register",
+    path: "register",
     element: <Register />,
   },
   {
-    path: "/signin",
+    path: "signin",
     element: <SignIn />,
   },
   {
-    path: "/otp-verification",
+    path: "otp-verification",
     element: <OTPVerification />,
   },
   {
-    path: "/otp-verified",
+    path: "otp-verified",
     element: <OTPVerified />,
   },
   {
-    path: "/storefront",
+    path: "storefront",
     element: <StoreFront />,
   },
   {
-    path: "/product-description",
-    element: <ProductDescription />,
+    path: "product-view",
+    element: <ProductView />,
   },
   {
     path: "/cart",
