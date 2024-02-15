@@ -1,11 +1,13 @@
 import React from "react";
 import UserNavbar from "../components/UserNavbar";
 import productPic from "../assets/shoe.png";
+import ProductPageCarousel from "../components/ProductPageCarousel";
 const ProductView = () => {
   const sizes = [...Array(4).keys()];
   const goToProductView = () => {
     navigate("/product-view");
   };
+  const images = [productPic, productPic]
   return (
     <div>
       <UserNavbar />
@@ -43,9 +45,7 @@ const ProductView = () => {
           </div>
         </div>
         <div className="flex px-6 w-full justify-between gap-6 sm:text-xs md:text-lg items-center">
-          <div className="w-2/5 bg-yellow-400 items-center flex justify-center rounded-lg text-white h-24">
-            Carousel
-          </div>
+          <ProductPageCarousel images={images}/>
           <div className="flex w-3/5">
             <button
               className="ml-8 py-7 bg-[#083167] w-full text-white rounded-lg font-semibold"
