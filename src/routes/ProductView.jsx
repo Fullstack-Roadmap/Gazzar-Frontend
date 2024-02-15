@@ -9,7 +9,7 @@ const ProductView = () => {
   return (
     <div>
       <UserNavbar />
-      <section className="rounded-xl flex flex-col border-[1px] border-gray lg:mx-40 md:mx-28 sm:mx-20 md:my-14 md:mb-20 sm:my-10 py-8">
+      <section className="rounded-xl flex flex-col border-[1px] border-gray lg:mx-[9.75rem] md:mx-28 sm:mx-20 md:mt-14 md:mb-32 sm:my-10 py-6">
         <div className="md:pb-8 md:pt-6 md:px-6 flex md:gap-12">
           <img
             src={productPic}
@@ -55,18 +55,18 @@ const ProductView = () => {
             </button>
           </div>
         </div>
-        <section className="sm:mx-4 md:mx-6 sm:my-6 md:my-10">
+        <section className="sm:mx-4 md:mx-6 sm:mt-6 md:mt-10">
           <header className="text-3xl font-bold md:mt-6">
             Product Description
           </header>
-          <p className="sm:m-4 md:px-8 md:my-6  md:py-6 font-medium w-2/3 bg-gray/50 rounded-xl">
+          <p className="sm:m-4 md:px-8 md:my-6  md:py-6 font-medium w-4/5 bg-gray/30 rounded-xl text-[1rem]">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
             odit esse tempore, perspiciatis harum quis perferendis ex officiis
             provident corporis enim repudiandae vel magni ratione sint eius
             nesciunt natus laboriosam! Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Quam sequi sunt dolorum dicta pariatur fuga
             laborum ipsam sed itaque? Doloribus, quidem! Vel eveniet dolores
-            dolore, culpa mollitia voluptates explicabo eos.
+            dolore, culpa mollitia voluptates explicabo eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, possimus. Aspernatur, ex molestiae!
           </p>
         </section>
       </section>
