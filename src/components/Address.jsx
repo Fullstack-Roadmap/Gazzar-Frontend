@@ -20,7 +20,7 @@ const Address = ({ id }) => {
         <img
           className="w-100 top-0 z-10 -right-0 absolute"
           src={pattern}
-          alt=""
+          alt="pattern"
         />
         {id === "1" && <img className="z-20 w-2/3" src={picOne} />}
         {id === "2" && <img className="z-20 w-2/3" src={picTwo} />}
