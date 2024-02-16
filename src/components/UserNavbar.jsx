@@ -21,7 +21,7 @@ const UserNavbar = () => {
           onClick={toggleMenu}
         ></div>
       )}
-      <nav className="flex justify-between items-center lg:mx-36 md:mx-20 sm:my-6 md:my-6 lg:my-0 font-semibold text-black/50 sm:justify-around">
+      <nav className="flex justify-between items-center lg:mx-[9.75rem] md:mx-20 sm:my-6 md:my-6 lg:my-0 font-semibold text-black/50 sm:justify-around">
         <img
           src={profilePic}
           className="w-14  cursor-pointer"
