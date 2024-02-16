@@ -36,7 +36,7 @@ const OTPVerification = () => {
         navigate("/otp-verified");
       } catch (error) {
         console.log(error);
-        setOtpError(JSON.stringify(error));
+        setOtpError("Invalid OTP");
       }
     }
 
