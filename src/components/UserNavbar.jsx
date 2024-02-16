@@ -3,8 +3,10 @@ import profilePic from "../assets/profilePic.png";
 import ellipses from "../assets/svgs/ellipses.svg";
 import search from "../assets/svgs/search.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const UserNavbar = () => {
+  const navigate = useNavigate();
   const [menuState, setMenuState] = useState(false);
   const toggleMenu = () => {
     setMenuState(!menuState);
@@ -46,6 +48,7 @@ const UserNavbar = () => {
             } cursor-pointer`}
             onClick={() => {
               toggleNavLink(0);
+              navigate("/");
             }}
           >
             Home
