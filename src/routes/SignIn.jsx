@@ -4,8 +4,15 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [message, setMessage] = useState("");
+
   const schema = yup.object().shape({
     email: yup.string().email("invalid email").required("required"),
     password: yup
@@ -23,8 +30,24 @@ const SignIn = () => {
     reValidateMode: "onBlur",
     resolver: yupResolver(schema),
   });
-  const signInUser = (form, e) => {
-    console.log(form + "Successfully validated Data");
+
+  const signInUser = async (form, e) => {
+    const rest = form;
+    try {
+      console.log("recieved form by: " + form.email);
+      await axios
+        .post("https://gazzar-api.onrender.com/v1/auth/signin", rest)
+        .then((response) => {
+          console.log("posted form");
+          navigate("/", { state: { status: "Signed In" } });
+          console.log(response.data.message);
+        });
+    } catch (error) {
+      if (error) {
+        setMessage("Email or password incorrect");
+        console.error(error.response.data);
+      }
+    }
     e.preventDefault();
   };
   return (
@@ -70,6 +93,7 @@ const SignIn = () => {
                   {...register("password")}
                 />
               </div>
+
               <div className="w-full flex justify-between">
                 <div className="flex gap-1 items-center">
                   <input
@@ -81,6 +105,9 @@ const SignIn = () => {
                 <span className="text-blue font-extrabold">
                   <Link to="/signin">Forgot your password?</Link>
                 </span>
+              </div>
+              <div className="text-xs w-full text-red-700 text-center">
+                {message}
               </div>
               <div className="bg-blue text-white rounded-lg mt-6 w-full font-bold flex justify-center">
                 <button className="w-full cursor-pointer p-5">Sign in</button>
