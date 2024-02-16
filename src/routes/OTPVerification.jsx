@@ -29,7 +29,7 @@ const OTPVerification = () => {
         console.log(otp)
         console.log(form);
         const res = await axios.post(
-          "https://gazzar-api.onrender.com.gazzar/v1/auth/verify-otp",
+          "https://gazzar-api.onrender.com/v1/auth/verify-otp",
           form
         );
         if (!res) return;
