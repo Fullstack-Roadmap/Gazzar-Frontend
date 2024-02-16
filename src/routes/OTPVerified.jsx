@@ -1,7 +1,9 @@
 import Carousel from "../components/Carousel";
 import OTPSuccessImage from "../components/OTPSuccessImage";
+import { useNavigate } from "react-router";
 
 const OTPVerified = () => {
+  const navigate = useNavigate()
   return (
     <div className="lg:flex">
       <div className="relative w-1/2">
@@ -21,7 +23,7 @@ const OTPVerified = () => {
               </p>
             </span>
             <div className="bg-blue text-white rounded-lg mt-10 w-full font-bold flex justify-center p-1">
-              <button className="w-full h-full p-3 text-sm">Done</button>
+              <button className="w-full h-full p-3 text-sm" onClick={()=> {navigate("/")}}>Done</button>
             </div>
           </section>
         </div>

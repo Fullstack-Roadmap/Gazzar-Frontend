@@ -4,6 +4,7 @@ import picTwo from "../assets/Store Page (2).png"
 import picThree from "../assets/Group 227 (1).png";
 import registerImg from '../assets/svgs/registerPattern.svg'
 import otpVerification from "../assets/svgs/otpVerification.svg"
+import ledger from "../assets/svgs/ledger.svg"
 
 const Address = ({ id }) => {
   return (
@@ -25,7 +26,7 @@ const Address = ({ id }) => {
         {id === "2" && <img className="z-20 w-2/3" src={picTwo} />}
         {id === "3" && <img className="z-20 w-full" src={picThree} />}
         {id === "4" && <img className="z-20 w-4/5 my-8" src={registerImg} />}
-        {id === "5" && <img className="z-20 w-4/5" src={otpVerification} />}
+        {id === "5" && <img className="mt-10 z-20" src={ledger} />}
       </div>
       {id === "1" && (
         <section className="text-3xl z-20 w-3/5">
@@ -46,8 +47,8 @@ const Address = ({ id }) => {
         </section>
       )}
       {id === "5" && (
-        <section className="text-3xl z-20 leading-relaxed -translate-y-16">
-          Hang on, <p>We're almost there</p>
+        <section className="text-3xl z-20 leading-relaxed -translate-y-16 mt-20">
+          You're all <p>ready to go!</p>
         </section>
       )}
 
