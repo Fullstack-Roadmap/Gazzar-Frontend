@@ -1,13 +1,16 @@
 import React from "react";
 import UserNavbar from "../components/UserNavbar";
 import productPic from "../assets/shoe.png";
+import productPic2 from "../assets/shoe2.png";
+import productPic3 from "../assets/shoe3.png";
+import productPic4 from "../assets/shoe4.png";
 import ProductPageCarousel from "../components/ProductPageCarousel";
 const ProductView = () => {
   const sizes = [...Array(4).keys()];
   const goToProductView = () => {
     navigate("/product-view");
   };
-  const images = [productPic, productPic]
+  const images = [productPic, productPic2, productPic3, productPic4];
   return (
     <div>
       <UserNavbar />

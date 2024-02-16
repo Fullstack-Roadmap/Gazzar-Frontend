@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+
 
 const ProductPageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,17 +20,32 @@ const ProductPageCarousel = ({ images }) => {
     setCurrentIndex(index);
   };
   return (
-    <div className="flex">
-      <img key={currentIndex} src={images[currentIndex]} />
-      <div className="slide_direction">
-        <div className="bg-blue rounded-full flex p-2" onClick={handlePrevious}>
-          arrow
+    <div className="flex relative">
+      <div className="h-24 flex gap-2">
+        {images.map((image, index) => (
+           <img
+            key={index}
+            src={image}
+              className={`object-cover w-full h-full ${currentIndex === index ? "opacity-100" : "opacity-35"}`}
+              onClick={handleNext}
+          />
+        ))}
+      </div>
+      <div className="flex justify-center items-center">
+        <div
+          className="absolute -left-4  bg-blue rounded-full flex p-1"
+          onClick={handlePrevious}
+        >
+          <IoIosArrowBack color="white" />
         </div>
-        <div className="bg-blue rounded-full flex p-2" onClick={handleNext}>
-          arrow
+        <div
+          className="absolute -right-4 bg-blue rounded-full flex p-1"
+          onClick={handleNext}
+        >
+          <IoIosArrowForward color="white" />
         </div>
       </div>
-      <div className="indicator">
+      <div className="flex">
         {images.map((_, index) => (
           <div
             key={index}
