@@ -10,7 +10,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const SignIn = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const [message, setMessage] = useState("");
 
   const schema = yup.object().shape({
@@ -39,7 +38,7 @@ const SignIn = () => {
         .post("https://gazzar-api.onrender.com/v1/auth/signin", rest)
         .then((response) => {
           console.log("posted form");
-          navigate("/", { state: { status: "Signed In" } });
+          navigate("/", { state: { status: "You're Signed In" } });
           console.log(response.data.message);
         });
     } catch (error) {
