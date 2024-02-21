@@ -38,9 +38,9 @@ const ProductPageCarousel = ({ images }) => {
       </div>
       <div className="overflow-hidden">
         <div
-          className={`movable flex relative  transition-all duration-300 ease-in-out ${
+          className={`movable flex relative  transition-all duration-300 ease-in-out md:pr-48 lg:pr-0 ${
             movableForwards && currentIndex !== 0 ? "-translate-x-20" : ""
-          }`}
+          } ${currentIndex === 2 && "-translate-x-20"}`}
         >
           <div className="lg:h-24 md:h-20 sm:h-16 flex gap-2">
             {images.map((image, index) => (
