@@ -5,10 +5,12 @@ import { IoIosArrowBack } from "react-icons/io";
 
 const ProductPageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [movableForwards, setMovableForwards] = useState(false)
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === images.length ? 0 : prevIndex + 1
     );
+    setMovableForwards(true)
   };
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -34,28 +36,34 @@ const ProductPageCarousel = ({ images }) => {
           <IoIosArrowForward color="white" />
         </div>
       </div>
-      <div className="flex relative overflow-hidden">
-        <div className="lg:h-24 md:h-20 sm:h-16 flex gap-2">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              className={`object-cover w-full h-full ${
-                currentIndex === index ? "opacity-100" : "opacity-35"
-              }`}
-              onClick={handleNext}
-            />
-          ))}
-        </div>
+      <div className="overflow-hidden">
+        <div
+          className={`movable flex relative  transition-all duration-300 ease-in-out ${
+            movableForwards && currentIndex !== 0 ? "-translate-x-20" : ""
+          }`}
+        >
+          <div className="lg:h-24 md:h-20 sm:h-16 flex gap-2">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                className={`object-cover w-full h-full ${
+                  currentIndex === index ? "opacity-100" : "opacity-35"
+                }`}
+                onClick={handleNext}
+              />
+            ))}
+          </div>
 
-        <div className="flex">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              className={`dot ${currentIndex === index ? "active" : ""}`}
-              onClick={() => handleDotClick(index)}
-            ></div>
-          ))}
+          <div className="flex">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                className={`dot ${currentIndex === index ? "active" : ""}`}
+                onClick={() => handleDotClick(index)}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
