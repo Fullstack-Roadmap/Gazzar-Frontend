@@ -19,7 +19,7 @@ const ProductPageCarousel = ({ images }) => {
     setCurrentIndex(index);
   };
   return (
-    <div className="bg-green-900">
+    <div className="">
       <div className="relative flex justify-center items-center z-20 lg:translate-y-12 md:translate-y-10 sm:translate-y-8">
         <div
           className="absolute -left-4  bg-blue rounded-full flex p-1"
