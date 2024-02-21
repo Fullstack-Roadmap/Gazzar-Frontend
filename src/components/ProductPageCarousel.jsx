@@ -22,7 +22,7 @@ const ProductPageCarousel = ({ images }) => {
     <div className="">
       <div className="relative flex justify-center items-center z-20 lg:translate-y-12 md:translate-y-10 sm:translate-y-8">
         <div
-          className="absolute -left-4  bg-blue rounded-full flex p-1"
+          className="absolute -left-4 bg-blue rounded-full flex p-1"
           onClick={handlePrevious}
         >
           <IoIosArrowBack color="white" />
