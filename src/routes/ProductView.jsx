@@ -21,20 +21,26 @@ const ProductView = () => {
             alt="product"
             className="md:w-2/5 sm:w-full rounded-2xl object-cover"
           />
-          <div className="flex flex-col mb-4 gap-10">
+          <div className="flex flex-col mb-4 lg:gap-10 md:gap-8">
             <section>
-              <h1 className="font-extrabold text-5xl mb-4">Airforce 1's</h1>
-              <p className="text-black/50 font-semibold">
+              <h1 className="font-extrabold lg:text-5xl mb-4 md:text-3xl">
+                Airforce 1's
+              </h1>
+              <p className="text-black/50 font-semibold md:text-sm  lg:text-base">
                 Brand:{" "}
-                <span className="font-extrabold text-black text-lg">Nike</span>
+                <span className="font-extrabold text-black lg:text-lg md:text-sm">
+                  Nike
+                </span>
               </p>
             </section>
             <section>
-              <h2 className="text-5xl font-semibold mb-3">N30,000</h2>
-              <p className="font-bold">19 in stock</p>
+              <h2 className="lg:text-5xl font-semibold mb-3 md:text-3xl">
+                N30,000
+              </h2>
+              <p className="font-bold lg:text-base md:text-sm">19 in stock</p>
             </section>
             <section>
-              <h3 className="font-extrabold sm:text-xs md:text-lg mb-5">
+              <h3 className="font-extrabold sm:text-xs md:text-base mb-5 lg:text-lg">
                 Variations
               </h3>
               <ul className="flex gap-2 flex-wrap">
@@ -48,7 +54,7 @@ const ProductView = () => {
           </div>
         </div>
         <div className="flex px-6 w-full justify-between gap-6 sm:text-xs md:text-lg items-center">
-          <ProductPageCarousel images={images}/>
+          <ProductPageCarousel images={images} />
           <div className="flex w-3/5">
             <button
               className="ml-8 py-7 bg-[#083167] w-full text-white rounded-lg font-semibold"
@@ -69,7 +75,9 @@ const ProductView = () => {
             nesciunt natus laboriosam! Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Quam sequi sunt dolorum dicta pariatur fuga
             laborum ipsam sed itaque? Doloribus, quidem! Vel eveniet dolores
-            dolore, culpa mollitia voluptates explicabo eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, possimus. Aspernatur, ex molestiae!
+            dolore, culpa mollitia voluptates explicabo eos. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Tempore, possimus.
+            Aspernatur, ex molestiae!
           </p>
         </section>
       </section>
