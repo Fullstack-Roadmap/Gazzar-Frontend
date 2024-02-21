@@ -19,14 +19,14 @@ const ProductView = () => {
           <img
             src={productPic}
             alt="product"
-            className="md:w-2/5 sm:w-full rounded-2xl object-cover"
+            className="md:w-2/5 sm:w-2/5 sm:scale-50 rounded-2xl object-contain"
           />
-          <div className="flex flex-col mb-4 lg:gap-10 md:gap-8">
+          <div className="flex flex-col mb-4 lg:gap-10 md:gap-8 sm:gap-6">
             <section>
-              <h1 className="font-extrabold lg:text-5xl mb-4 md:text-3xl">
+              <h1 className="font-extrabold lg:text-5xl mb-4 md:text-3xl sm:text-2xl">
                 Airforce 1's
               </h1>
-              <p className="text-black/50 font-semibold md:text-sm  lg:text-base">
+              <p className="text-black/50 font-semibold md:text-sm  lg:text-base sm:text-sm">
                 Brand:{" "}
                 <span className="font-extrabold text-black lg:text-lg md:text-sm">
                   Nike
@@ -34,18 +34,18 @@ const ProductView = () => {
               </p>
             </section>
             <section>
-              <h2 className="lg:text-5xl font-semibold mb-3 md:text-3xl">
+              <h2 className="lg:text-5xl font-semibold mb-3 md:text-3xl sm:text-2xl">
                 N30,000
               </h2>
-              <p className="font-bold lg:text-base md:text-sm">19 in stock</p>
+              <p className="font-bold lg:text-base md:text-sm sm:text-sm">19 in stock</p>
             </section>
             <section>
-              <h3 className="font-extrabold sm:text-xs md:text-base mb-5 lg:text-lg">
+              <h3 className="font-extrabold md:text-base mb-5 lg:text-lg sm:text-sm">
                 Variations
               </h3>
               <ul className="flex gap-2 flex-wrap">
                 {sizes.map(() => (
-                  <li className="sm:px-4 sm:py-3 md:px-6 md:py-5 border-black/30 border-[1px] font-semibold rounded-xl sm:text-[0.65rem] md:text-sm cursor-pointer text-black/80">
+                  <li className="sm:px-4 sm:py-3 md:px-6 md:py-5 border-black/30 border-[1px] font-semibold rounded-xl sm:text-xs md:text-sm cursor-pointer text-black/80">
                     Size 42
                   </li>
                 ))}
@@ -57,7 +57,7 @@ const ProductView = () => {
           <ProductPageCarousel images={images} />
           <div className="flex w-3/5">
             <button
-              className="ml-8 py-7 bg-[#083167] w-full text-white rounded-lg font-semibold"
+              className="ml-8 py-7 bg-[#083167] w-full text-white rounded-lg font-semibold lg:text-lg md:text-base"
               onClick={goToProductView}
             >
               Add to cart
@@ -65,7 +65,7 @@ const ProductView = () => {
           </div>
         </div>
         <section className="sm:mx-4 md:mx-6 sm:mt-6 md:mt-10">
-          <header className="text-3xl font-bold md:mt-6">
+          <header className="text-3xl sm:text-2xl font-bold md:mt-6">
             Product Description
           </header>
           <p className="sm:m-4 md:px-8 md:my-6  md:py-6 font-medium w-4/5 bg-gray/30 rounded-xl text-[1rem]">

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 
-
 const ProductPageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const handleNext = () => {
@@ -20,18 +19,8 @@ const ProductPageCarousel = ({ images }) => {
     setCurrentIndex(index);
   };
   return (
-    <div className="flex relative">
-      <div className="h-24 flex gap-2">
-        {images.map((image, index) => (
-           <img
-            key={index}
-            src={image}
-              className={`object-cover w-full h-full ${currentIndex === index ? "opacity-100" : "opacity-35"}`}
-              onClick={handleNext}
-          />
-        ))}
-      </div>
-      <div className="flex justify-center items-center">
+    <div className="bg-green-900">
+      <div className="relative flex justify-center items-center z-20 lg:translate-y-12 md:translate-y-10 sm:translate-y-8">
         <div
           className="absolute -left-4  bg-blue rounded-full flex p-1"
           onClick={handlePrevious}
@@ -45,14 +34,29 @@ const ProductPageCarousel = ({ images }) => {
           <IoIosArrowForward color="white" />
         </div>
       </div>
-      <div className="flex">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={`dot ${currentIndex === index ? "active" : ""}`}
-            onClick={() => handleDotClick(index)}
-          ></div>
-        ))}
+      <div className="flex relative overflow-hidden">
+        <div className="lg:h-24 md:h-20 sm:h-16 flex gap-2">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              className={`object-cover w-full h-full ${
+                currentIndex === index ? "opacity-100" : "opacity-35"
+              }`}
+              onClick={handleNext}
+            />
+          ))}
+        </div>
+
+        <div className="flex">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`dot ${currentIndex === index ? "active" : ""}`}
+              onClick={() => handleDotClick(index)}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
