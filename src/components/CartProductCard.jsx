@@ -11,7 +11,7 @@ const CartProductCard = () => {
             <span>Airforce 1's</span>
             <div className="flex gap-5">
                 <span>Brand</span>
-                <span>Variation</span>
+                <span>Variations</span>
             </div>
         </div>
         <div className="flex flex-col gap-3 w-1/4 mt-6">
