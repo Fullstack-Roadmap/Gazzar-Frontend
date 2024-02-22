@@ -14,14 +14,19 @@ const ProductView = () => {
   return (
     <div>
       <UserNavbar />
-      <section className="rounded-xl flex flex-col border-[1px] border-gray lg:mx-[9.75rem] md:mx-28 sm:mx-20 md:mt-14 md:mb-32 sm:my-10 lg:py-6">
+      <section className="rounded-xl flex flex-col border-[1px] border-gray lg:mx-[9.75rem] md:mx-28 sm:mx-10 md:mt-14 md:mb-32 sm:my-10 lg:py-6">
+        <img
+          src={productPic}
+          alt="product"
+          className="md:w-1/2 lg:w-2/5 p-10 rounded-2xl object-contain md:hidden"
+        />
         <div className="md:pb-8 md:pt-6 md:px-6 flex md:gap-8 lg:gap-12">
           <img
             src={productPic}
             alt="product"
-            className="md:w-1/2 lg:w-2/5 sm:w-2/5 sm:scale-50 rounded-2xl object-contain"
+            className="md:w-1/2 lg:w-2/5 sm:w-2/5 sm:scale-50 rounded-2xl object-contain sm:hidden"
           />
-          <div className="flex flex-col mb-4 lg:gap-10 md:gap-8 sm:gap-6">
+          <div className="flex flex-col mb-4 lg:gap-10 md:gap-8 sm:gap-6 sm:px-10">
             <section>
               <h1 className="font-extrabold lg:text-5xl mb-4 md:text-3xl sm:text-2xl md:mt-5 lg:mt-0">
                 Airforce 1's
@@ -37,7 +42,9 @@ const ProductView = () => {
               <h2 className="lg:text-5xl font-semibold mb-3 md:text-3xl sm:text-2xl">
                 N30,000
               </h2>
-              <p className="font-bold lg:text-base md:text-sm sm:text-sm">19 in stock</p>
+              <p className="font-bold lg:text-base md:text-sm sm:text-sm">
+                19 in stock
+              </p>
             </section>
             <section>
               <h3 className="font-extrabold md:text-base mb-5 lg:text-lg sm:text-sm">
@@ -53,22 +60,22 @@ const ProductView = () => {
             </section>
           </div>
         </div>
-        <div className="flex px-6 w-full justify-between gap-6 sm:text-xs md:text-lg items-center">
+        <div className="flex sm:flex-col px-6 w-full justify-between gap-6 sm:text-xs md:text-lg items-center">
           <ProductPageCarousel images={images} />
           <div className="flex w-3/5">
             <button
-              className="ml-8 py-7 bg-[#083167] w-full text-white rounded-lg font-semibold lg:text-lg md:text-base px-4"
+              className="md:ml-8 md:py-7 sm:py-4 bg-[#083167] w-full text-white rounded-lg font-semibold lg:text-lg md:text-base px-4"
               onClick={goToProductView}
             >
               Add to cart
             </button>
           </div>
         </div>
-        <section className="sm:mx-4 md:mx-6 sm:mt-6 md:mt-10">
-          <header className="text-3xl sm:text-2xl font-bold md:mt-6">
+        <section className="sm:mx-8 md:mx-6 sm:mt-14 md:mt-10">
+          <header className="text-3xl sm:text-xl font-bold md:mt-6">
             Product Description
           </header>
-          <p className="sm:m-4 md:px-8 md:my-6  md:py-6 font-medium w-4/5 bg-gray/30 rounded-xl text-[1rem]">
+          <p className="sm:my-4 md:px-8 md:my-6 md:py-6 sm:p-4 font-medium md:w-4/5 bg-gray/30 rounded-xl text-[1rem] sm:text-xs">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
             odit esse tempore, perspiciatis harum quis perferendis ex officiis
             provident corporis enim repudiandae vel magni ratione sint eius
