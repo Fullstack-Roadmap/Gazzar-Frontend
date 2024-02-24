@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import UserNavbar from "../components/UserNavbar";
 import productPic from "../assets/shoe.png";
 import productPic2 from "../assets/shoe2.png";
 import productPic3 from "../assets/shoe3.png";
 import productPic4 from "../assets/shoe4.png";
 import ProductPageCarousel from "../components/ProductPageCarousel";
+import { useNavigate } from "react-router";
+
 const ProductView = () => {
   const sizes = [...Array(4).keys()];
-  const goToProductView = () => {
-    navigate("/product-view");
+  const navigate = useNavigate()
+  const goToCart = () => {
+    navigate("/cart");
   };
+  const [coloured, setColoured] = useState(false)
+  const changeColour = () => {
+    setColoured(!coloured)
+  }
   const images = [productPic, productPic2, productPic3, productPic4];
   return (
     <div>
@@ -52,7 +59,7 @@ const ProductView = () => {
               </h3>
               <ul className="flex gap-2 flex-wrap">
                 {sizes.map(() => (
-                  <li className="sm:px-4 sm:py-3 md:px-5 lg:px-6 md:py-4 lg:py-5 border-black/30 border-[1px] font-semibold rounded-xl sm:text-xs md:text-sm cursor-pointer text-black/80">
+                  <li className={`sm:px-4 sm:py-3 md:px-5 lg:px-6 md:py-4 lg:py-5 border-black/30 border-[1px] font-semibold rounded-xl sm:text-xs md:text-sm cursor-pointer text-black/80 ${coloured && "bg-blue"}`} onClick={changeColour}>
                     Size 42
                   </li>
                 ))}
@@ -65,7 +72,7 @@ const ProductView = () => {
           <div className="flex w-3/5">
             <button
               className="md:ml-8 md:py-7 sm:py-4 bg-[#083167] w-full text-white rounded-lg font-semibold lg:text-lg md:text-base px-4"
-              onClick={goToProductView}
+              onClick={goToCart}
             >
               Add to cart
             </button>
