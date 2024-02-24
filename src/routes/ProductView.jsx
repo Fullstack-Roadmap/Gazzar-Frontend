@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import UserNavbar from "../components/UserNavbar";
 import productPic from "../assets/shoe.png";
 import productPic2 from "../assets/shoe2.png";
@@ -10,6 +10,10 @@ const ProductView = () => {
   const goToProductView = () => {
     navigate("/product-view");
   };
+  const [coloured, setColoured] = useState(false)
+  const changeColour = () => {
+    setColoured(!coloured)
+  }
   const images = [productPic, productPic2, productPic3, productPic4];
   return (
     <div>
@@ -52,7 +56,7 @@ const ProductView = () => {
               </h3>
               <ul className="flex gap-2 flex-wrap">
                 {sizes.map(() => (
-                  <li className="sm:px-4 sm:py-3 md:px-5 lg:px-6 md:py-4 lg:py-5 border-black/30 border-[1px] font-semibold rounded-xl sm:text-xs md:text-sm cursor-pointer text-black/80">
+                  <li className={`sm:px-4 sm:py-3 md:px-5 lg:px-6 md:py-4 lg:py-5 border-black/30 border-[1px] font-semibold rounded-xl sm:text-xs md:text-sm cursor-pointer text-black/80 ${coloured && "bg-blue"}`} onClick={changeColour}>
                     Size 42
                   </li>
                 ))}
