@@ -17,39 +17,44 @@ const Dashboard = () => {
   const setNavActive = (navItem) => {
     setActive(navItem);
   };
+  const navItems = [
+    { name: "Overview", svg: overview },
+    { name: "Statistics", svg: statistics },
+    { name: "Products", svg: products },
+    { name: "Customers", svg: customers },
+    { name: "Feedback", svg: feedback },
+    { name: "Orders", svg: orders },
+    { name: "Store", svg: store },
+    { name: "Profile", svg: profile },
+  ];
   return (
     <div className="flex h-full">
       <section className="h-full border-r-[1px] border-b-[1px] rounded-md border-gray">
-        <header className="text-[1.375rem] font-extrabold flex items-center gap-2 mx-16 my-14 -translate-x-5">
+        <header className="text-[1.375rem] font-extrabold flex items-center gap-2 mx-16 mb-14 mt-16 -translate-x-5">
           <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722] "></span>
           <p>Gazzar.</p>
         </header>
         <ul className="flex flex-col gap-1 items-start h-full px-4">
-          <li
-            className={`relative flex items-center gap-2 pl-7 py-4 w-full text-blue text-sm font-bold bg-slate-200 rounded-lg`}
-            onClick={() => setNavActive("overview")}
-          >
-            <div className="absolute left-0 rounded-full h-3/4 bg-blue w-1 flex" />
-            <img src={overview} alt="" />
-            Overview
-          </li>
-          <li
-            className={`relative flex items-center gap-2 pl-7 py-4 w-full rounded-lg text-sm  ${
-              active === "statistics"
-                ? "font-bold bg-slate-200 text-blue"
-                : "font-semibold text-black/70"
-            }`}
-            onClick={() => setNavActive("statistics")}
-          >
-            <div
-              className={`absolute left-0 rounded-full bg-blue w-1 flex transition-all duration-200 ease-in-out ${
-                active === "statistics" ? "h-3/4" : "h-0"
+          {navItems.map((item, index) => (
+            <li
+              key={index}
+              className={`cursor-pointer relative flex items-center gap-2 pl-7 py-4 w-full rounded-lg text-sm  ${
+                active === item.name
+                  ? "font-bold bg-slate-200 text-blue"
+                  : "font-semibold text-black/70"
               }`}
-            />
-            <img src={statistics} alt="" className="" />
-            Statistics
-          </li>
-          <li
+              onClick={() => setNavActive(item.name)}
+            >
+              <div
+                className={`absolute left-0 rounded-full bg-blue w-1 flex transition-all duration-200 ease-in-out ${
+                  active === item.name ? "h-3/4" : "h-0"
+                }`}
+              />
+              <img src={item.svg} alt="" className="" />
+              {item.name}
+            </li>
+          ))}
+          {/* <li
             className={`relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold`}
             onClick={() => setNavActive("products")}
           >
@@ -90,7 +95,7 @@ const Dashboard = () => {
           >
             <img src={profile} alt="" />
             Profile
-          </li>
+          </li> */}
         </ul>
       </section>
       <section className="w-full">
