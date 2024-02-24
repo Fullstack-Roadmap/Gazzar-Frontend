@@ -12,7 +12,10 @@ import orders from "../assets/svgs/orders.svg";
 import store from "../assets/svgs/store.svg";
 import profile from "../assets/svgs/profile.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router";
+
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [active, setActive] = useState("overview");
   const setNavActive = (navItem) => {
     setActive(navItem);
@@ -30,7 +33,10 @@ const Dashboard = () => {
   return (
     <div className="flex h-full">
       <section className="h-full border-r-[1px] border-b-[1px] rounded-md border-gray">
-        <header className="text-[1.375rem] font-extrabold flex items-center gap-2 mx-16 mb-14 mt-16 -translate-x-5">
+        <header
+          className="text-[1.375rem] font-extrabold flex items-center gap-2 mx-16 mb-14 mt-16 -translate-x-5 cursor-pointer"
+          onClick={() => navigate("/storefront")}
+        >
           <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722] "></span>
           <p>Gazzar.</p>
         </header>

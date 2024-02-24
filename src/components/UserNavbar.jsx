@@ -27,7 +27,7 @@ const UserNavbar = () => {
         <img
           src={profilePic}
           className="w-14  cursor-pointer"
-          alt="profilePic"
+          alt="profilePic"onClick={() => navigate("/dashboard")}
         />
 
         <ul
