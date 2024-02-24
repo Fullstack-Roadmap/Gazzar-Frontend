@@ -5,10 +5,13 @@ import productPic2 from "../assets/shoe2.png";
 import productPic3 from "../assets/shoe3.png";
 import productPic4 from "../assets/shoe4.png";
 import ProductPageCarousel from "../components/ProductPageCarousel";
+import { useNavigate } from "react-router";
+
 const ProductView = () => {
   const sizes = [...Array(4).keys()];
-  const goToProductView = () => {
-    navigate("/product-view");
+  const navigate = useNavigate()
+  const goToCart = () => {
+    navigate("/cart");
   };
   const [coloured, setColoured] = useState(false)
   const changeColour = () => {
@@ -69,7 +72,7 @@ const ProductView = () => {
           <div className="flex w-3/5">
             <button
               className="md:ml-8 md:py-7 sm:py-4 bg-[#083167] w-full text-white rounded-lg font-semibold lg:text-lg md:text-base px-4"
-              onClick={goToProductView}
+              onClick={goToCart}
             >
               Add to cart
             </button>
