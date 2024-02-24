@@ -4,38 +4,53 @@ import link from "../assets/svgs/link.svg";
 import bell from "../assets/svgs/bell.svg";
 import shop from "../assets/svgs/shop.svg";
 import overview from "../assets/svgs/overview.svg";
+import statistics from "../assets/svgs/statistics.svg";
+import products from "../assets/svgs/products.svg";
+import customers from "../assets/svgs/customers.svg";
+import feedback from "../assets/svgs/feedbacks.svg";
+import orders from "../assets/svgs/orders.svg";
+import store from "../assets/svgs/store.svg";
+import profile from "../assets/svgs/profile.svg";
 const Dashboard = () => {
   return (
     <div className="flex h-full">
       <section className="h-full border-r-[1px] border-b-[1px] rounded-md border-gray">
-        <header className="text-[1.375rem] font-extrabold flex items-center gap-2 m-16 -translate-x-5">
+        <header className="text-[1.375rem] font-extrabold flex items-center gap-2 mx-16 my-14 -translate-x-5">
           <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722] "></span>
           <p>Gazzar.</p>
         </header>
         <ul className="flex flex-col gap-1 items-start h-full px-4">
-          <li className="flex items-center gap-2 pl-7 py-5 w-full text-black/70 text-sm font-semibold bg-gray rounded-lg">
+          <li className="relative flex items-center gap-2 pl-7 py-4 w-full text-blue text-sm font-bold bg-slate-200 rounded-lg">
+            <div className="absolute left-0 rounded-full h-3/4 bg-blue w-1 flex"></div>
             <img src={overview} alt="" />
             Overview
           </li>
-          <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
+          <li className="relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold">
+            <img src={statistics} alt="" />
             Statistics
           </li>
-          <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
+          <li className="relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold">
+            <img src={products} alt="" />
             Products
           </li>
-          <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
+          <li className="relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold">
+            <img src={customers} alt="" />
             Customers
           </li>
-          <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
+          <li className="relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold">
+            <img src={feedback} alt="" />
             Feedback
           </li>
-          <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
+          <li className="relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold">
+            <img src={orders} alt="" />
             Orders
           </li>
-          <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
+          <li className="relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold">
+            <img src={store} alt="" />
             Store
           </li>
-          <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
+          <li className="relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold">
+            <img src={profile} alt="" />
             Profile
           </li>
         </ul>
