@@ -3,6 +3,7 @@ import ellipses from "../assets/svgs/ellipses.svg";
 import link from "../assets/svgs/link.svg";
 import bell from "../assets/svgs/bell.svg";
 import shop from "../assets/svgs/shop.svg";
+import overview from "../assets/svgs/overview.svg";
 const Dashboard = () => {
   return (
     <div className="flex h-full">
@@ -11,8 +12,9 @@ const Dashboard = () => {
           <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722] "></span>
           <p>Gazzar.</p>
         </header>
-        <ul className="flex flex-col gap-1 items-start h-full">
-          <li className="px-10 py-5 mx-4 text-black/70 text-md font-semibold bg-gray rounded-lg">
+        <ul className="flex flex-col gap-1 items-start h-full px-4">
+          <li className="flex items-center gap-2 pl-7 py-5 w-full text-black/70 text-sm font-semibold bg-gray rounded-lg">
+            <img src={overview} alt="" />
             Overview
           </li>
           <li className="px-10 py-5 mx-5 rounded-lg  text-black/70 text-md font-semibold">
