@@ -54,48 +54,6 @@ const Dashboard = () => {
               {item.name}
             </li>
           ))}
-          {/* <li
-            className={`relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold`}
-            onClick={() => setNavActive("products")}
-          >
-            <img src={products} alt="" />
-            Products
-          </li>
-          <li
-            className={`relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold`}
-            onClick={() => setNavActive("customers")}
-          >
-            <img src={customers} alt="" />
-            Customers
-          </li>
-          <li
-            className={`relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold`}
-            onClick={() => setNavActive("feedback")}
-          >
-            <img src={feedback} alt="" />
-            Feedback
-          </li>
-          <li
-            className={`relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold`}
-            onClick={() => setNavActive("orders")}
-          >
-            <img src={orders} alt="" />
-            Orders
-          </li>
-          <li
-            className={`relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold`}
-            onClick={() => setNavActive("store")}
-          >
-            <img src={store} alt="" />
-            Store
-          </li>
-          <li
-            className={`relative flex items-center gap-2 pl-7 py-5 w-full rounded-lg text-black/70 text-sm font-semibold`}
-            onClick={() => setNavActive("profile")}
-          >
-            <img src={profile} alt="" />
-            Profile
-          </li> */}
         </ul>
       </section>
       <section className="w-full">
