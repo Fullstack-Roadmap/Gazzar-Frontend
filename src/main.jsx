@@ -10,6 +10,7 @@ import LandingPage from "./routes/LandingPage.jsx";
 import StoreFront from "./routes/StoreFront.jsx";
 import ProductView from "./routes/ProductView.jsx";
 import Cart from "./routes/Cart.jsx";
+import Dashboard from "./routes/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/cart",
     element: <Cart />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 
