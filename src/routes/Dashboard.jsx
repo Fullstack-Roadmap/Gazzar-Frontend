@@ -41,7 +41,7 @@ const Dashboard = () => {
   };
   return (
     <div className="flex h-full">
-      {menuOpen && 
+      {menuOpen && (
         <div
           className="absolute z-10 w-screen h-screen"
           onClick={() => setMenuOpen(!menuOpen)}
