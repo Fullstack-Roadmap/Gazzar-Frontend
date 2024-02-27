@@ -14,6 +14,7 @@ import profile from "../assets/svgs/profile.svg";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { IoIosArrowForward } from "react-icons/io";
+import Overview from "./Overview";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -121,7 +122,8 @@ const Dashboard = () => {
             </div>
           </nav>
         </nav>
-        <section className="h-full"></section>
+        {active === "overview" ? <Overview /> : 
+        active === "statistics" && <Overview/>}
       </section>
     </div>
   );
