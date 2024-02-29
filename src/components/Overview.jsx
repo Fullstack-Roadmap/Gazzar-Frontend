@@ -1,3 +1,4 @@
+import cart from "../assets/svgs/cart.svg"
 const Overview = () => {
   return (
     <>
@@ -10,17 +11,17 @@ const Overview = () => {
           Complete account setup
         </button>
       </div>
-      <div className="m-10">
+      <div className="m-6">
         <ul>
-          <li className="border-2 rounded-xl border-gray p-5 w-fit flex">
-            <img src="" alt="" />
+          <li className="border-[1px] rounded-xl border-gray p-6 w-fit flex gap-3">
+            <div className="flex justify-center items-center bg-blue/20 rounded-full p-5"><img src={cart} alt="cart" /></div>
             <div>
-              <p className="font-semibold">No. of orders</p>
+              <p className="font-bold">No. of orders</p>
               <h1 className="text-4xl font-bold">17</h1>
             </div>
           </li>
         </ul>
-        <section>
+        <section className="my-6">
           <div>Amount made</div>
           <div>Top selling products</div>
         </section>
