@@ -14,10 +14,11 @@ import orders from "../assets/svgs/orders.svg";
 import store from "../assets/svgs/store.svg";
 import profile from "../assets/svgs/profile.svg";
 import arrowDown from "../assets/svgs/arrowDown.svg";
+import exit from "../assets/svgs/exit.svg";
 import profilePic from "../assets/profilePic.png";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { IoIosArrowDropdown, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import Overview from "../components/Overview";
 
 const Dashboard = () => {
@@ -111,17 +112,27 @@ const Dashboard = () => {
             </div>
           )}
           {loggedIn && (
-            <div className="py-4 px-2 flex justify-between items-center border-gray border-t-2 w-full">
-              <img
-                src={profilePic}
-                alt="profile pic"
-                className="h-10 aspect-auto"
-              />
-              <div>
-                <h1 className="text-xs text-blue font-bold mb-1">{user[0].businessName}</h1>
-                <p className="text-[0.65rem] text-black/50">{user[0].email}</p>
+            <div className="w-full">
+              <div className="py-4 px-2 flex justify-between items-center border-gray border-t-2 w-full">
+                <img
+                  src={profilePic}
+                  alt="profile pic"
+                  className="h-10 aspect-auto"
+                />
+                <div>
+                  <h1 className="text-xs text-blue font-bold mb-1">
+                    {user[0].businessName}
+                  </h1>
+                  <p className="text-[0.65rem] text-black/50">
+                    {user[0].email}
+                  </p>
+                </div>
+                <img src={arrowDown} alt="arrow" />
               </div>
-              <img src={arrowDown} alt="arrow" />
+              <div className="flex gap-3 text-red bg-red-600/20 rounded-md px-7 py-4 mb-10 font-semibold text-red-600">
+                <img src={exit} alt="log out" />
+                Logout
+              </div>
             </div>
           )}
         </ul>
