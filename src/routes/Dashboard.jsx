@@ -52,7 +52,7 @@ const Dashboard = () => {
         />
       )}
       <section
-        className={`lg:-translate-x-0 h-full bg-white border-r-[1px] border-b-[1px] rounded-md border-gray z-20 transition-all delay-300 duration-[400ms] ease-in-out ${
+        className={`w-[22%] lg:-translate-x-0 h-full bg-white border-r-[1px] border-b-[1px] border-gray z-20 transition-all delay-300 duration-[400ms] ease-in-out ${
           menuOpen ? "" : "sm:-translate-x-full md:-translate-x-full"
         }`}
       >
@@ -91,13 +91,17 @@ const Dashboard = () => {
             </li>
           ))}
           {!registrationComplete && (
-            <div className="bg-blue flex flex-col gap-3 p-4 rounded-lg">
-              <img src={ex} alt="remove" className="absolute" />
-              <img src={star} alt="gold star" className="h-16"/>
-              <p className="font-semibold text-white text-center text-sm">
-                Upgrade to Gazzar pro to unlock more features today
+            <div className="bg-blue flex flex-col gap-3 p-3 my-5 rounded-md items-center">
+              <button className="absolute left-7">
+                <img src={ex} alt="remove" className="h-5" />
+              </button>
+              <img src={star} alt="gold star" className="h-8" />
+              <p className="font-medium text-white flex text-center text-[0.7rem] w-4/5">
+                Upgrade to Gazzar pro to unlock more features today!
               </p>
-              <button className="text-blue text-xs font-semibold flex justify-center bg-white py-4 px-8 rounded-lg">Upgrade Now</button>
+              <button className="text-blue text-[0.7rem] font-bold flex justify-center bg-white py-2 rounded-md w-full">
+                Upgrade Now
+              </button>
             </div>
           )}
         </ul>
