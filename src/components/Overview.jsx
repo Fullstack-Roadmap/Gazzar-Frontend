@@ -32,9 +32,7 @@ const Overview = () => {
         <ul className="flex justify-between gap-4">
           {overviewList.map((item) => (
             <li className="border-[1px] rounded-xl border-gray px-8 py-6 flex gap-3">
-              <div className="flex justify-center items-center bg-blue/10 rounded-full p-5">
-                <img src={item.svg} alt="cart" />
-              </div>
+              <img src={item.svg} alt="cart" />
               <div>
                 <p className="font-bold">{item.title}</p>
                 <h1 className="text-4xl font-bold">{item.amount}</h1>

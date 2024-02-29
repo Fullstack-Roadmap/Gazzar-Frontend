@@ -1,5 +1,7 @@
 import book from "../assets/svgs/book.svg";
 import ellipses from "../assets/svgs/ellipses.svg";
+import ex from "../assets/svgs/ex.svg";
+import star from "../assets/svgs/star.svg";
 import link from "../assets/svgs/link.svg";
 import bell from "../assets/svgs/bell.svg";
 import shop from "../assets/svgs/shop.svg";
@@ -40,6 +42,7 @@ const Dashboard = () => {
     const capitalizedWord = firstLetterCap + remainingLetters;
     return capitalizedWord;
   };
+  const [registrationComplete, setRegistrationComplete] = useState(false);
   return (
     <div className="flex h-full">
       {menuOpen && (
@@ -72,7 +75,7 @@ const Dashboard = () => {
             <li
               key={index}
               className={`cursor-pointer relative flex items-center gap-2 pl-7 py-4 w-full rounded-lg text-sm  ${
-                active === item.name.toLocaleLowerCase()
+                active === item.name.toLowerCase()
                   ? "font-bold bg-slate-200 text-blue"
                   : "font-semibold text-black/70"
               }`}
@@ -80,13 +83,23 @@ const Dashboard = () => {
             >
               <div
                 className={`absolute left-0 rounded-full bg-blue w-1 flex transition-all duration-300 ease-in-out ${
-                  active === item.name.toLowerCase ? "h-3/4" : "h-0"
+                  active === item.name.toLowerCase() ? "h-3/4" : "h-0"
                 }`}
               />
               <img src={item.svg} alt={item.name} />
               {item.name}
             </li>
           ))}
+          {!registrationComplete && (
+            <div className="bg-blue flex flex-col gap-3 p-4 rounded-lg">
+              <img src={ex} alt="remove" className="absolute" />
+              <img src={star} alt="gold star" className="h-16"/>
+              <p className="font-semibold text-white text-center text-sm">
+                Upgrade to Gazzar pro to unlock more features today
+              </p>
+              <button className="text-blue text-xs font-semibold flex justify-center bg-white py-4 px-8 rounded-lg">Upgrade Now</button>
+            </div>
+          )}
         </ul>
       </section>
       <section className="w-full sm:absolute md:absolute lg:static">
