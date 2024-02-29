@@ -13,9 +13,11 @@ import feedback from "../assets/svgs/feedbacks.svg";
 import orders from "../assets/svgs/orders.svg";
 import store from "../assets/svgs/store.svg";
 import profile from "../assets/svgs/profile.svg";
+import arrowDown from "../assets/svgs/arrowDown.svg";
+import profilePic from "../assets/profilePic.png";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowDropdown, IoIosArrowForward } from "react-icons/io";
 import Overview from "../components/Overview";
 
 const Dashboard = () => {
@@ -43,6 +45,10 @@ const Dashboard = () => {
     return capitalizedWord;
   };
   const [registrationComplete, setRegistrationComplete] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+  const user = [
+    { businessName: "Omo Ope Ventures", email: "omoope01@gmail.com" },
+  ];
   return (
     <div className="flex h-full">
       {menuOpen && (
@@ -102,6 +108,20 @@ const Dashboard = () => {
               <button className="text-blue text-[0.7rem] font-bold flex justify-center bg-white py-2 rounded-md w-full">
                 Upgrade Now
               </button>
+            </div>
+          )}
+          {loggedIn && (
+            <div className="py-4 px-2 flex justify-between items-center border-gray border-t-2 w-full">
+              <img
+                src={profilePic}
+                alt="profile pic"
+                className="h-10 aspect-auto"
+              />
+              <div>
+                <h1 className="text-xs text-blue font-bold mb-1">{user[0].businessName}</h1>
+                <p className="text-[0.65rem] text-black/50">{user[0].email}</p>
+              </div>
+              <img src={arrowDown} alt="arrow" />
             </div>
           )}
         </ul>
