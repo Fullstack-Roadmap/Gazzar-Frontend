@@ -14,7 +14,7 @@ import profile from "../assets/svgs/profile.svg";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { IoIosArrowForward } from "react-icons/io";
-import Overview from "./Overview";
+import Overview from "../components/Overview";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -49,7 +49,6 @@ const Dashboard = () => {
         />
       )}
       <section
-        on
         className={`lg:-translate-x-0 h-full bg-white border-r-[1px] border-b-[1px] rounded-md border-gray z-20 transition-all delay-300 duration-[400ms] ease-in-out ${
           menuOpen ? "" : "sm:-translate-x-full md:-translate-x-full"
         }`}
@@ -73,15 +72,15 @@ const Dashboard = () => {
             <li
               key={index}
               className={`cursor-pointer relative flex items-center gap-2 pl-7 py-4 w-full rounded-lg text-sm  ${
-                active === item.name
+                active === item.name.toLocaleLowerCase()
                   ? "font-bold bg-slate-200 text-blue"
                   : "font-semibold text-black/70"
               }`}
-              onClick={() => setNavActive(item.name)}
+              onClick={() => setNavActive(item.name.toLowerCase())}
             >
               <div
                 className={`absolute left-0 rounded-full bg-blue w-1 flex transition-all duration-300 ease-in-out ${
-                  active === item.name ? "h-3/4" : "h-0"
+                  active === item.name.toLowerCase ? "h-3/4" : "h-0"
                 }`}
               />
               <img src={item.svg} alt={item.name} />
@@ -122,8 +121,11 @@ const Dashboard = () => {
             </div>
           </nav>
         </nav>
-        {active === "overview" ? <Overview /> : 
-        active === "statistics" && <Overview/>}
+        {active === "overview" ? (
+          <Overview />
+        ) : (
+          active === "statistics" && <Overview />
+        )}
       </section>
     </div>
   );

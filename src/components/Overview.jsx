@@ -11,7 +11,15 @@ const Overview = () => {
         </button>
       </div>
       <div className="m-10">
-        <ul></ul>
+        <ul>
+          <li className="border-2 rounded-xl border-gray p-5 w-fit flex">
+            <img src="" alt="" />
+            <div>
+              <p className="font-semibold">No. of orders</p>
+              <h1 className="text-4xl font-bold">17</h1>
+            </div>
+          </li>
+        </ul>
         <section>
           <div>Amount made</div>
           <div>Top selling products</div>
