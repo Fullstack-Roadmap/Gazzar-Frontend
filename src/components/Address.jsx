@@ -12,7 +12,7 @@ const Address = ({ id }) => {
     "
     >
       <header className="flex justify-start items-center gap-1">
-        <span className="rounded-sm aspect-square h-6 bg-[#FFB722]"></span>
+        <span className="rounded-sm aspect-square h-6 bg-[#f5af22]"></span>
         <p>Gazzar</p>
       </header>
       <div className="flex justify-center">
