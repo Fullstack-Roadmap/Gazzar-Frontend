@@ -40,9 +40,13 @@ const Overview = () => {
             </li>
           ))}
         </ul>
-        <section className="my-6">
-          <div>Amount made</div>
-          <div>Top selling products</div>
+        <section className="my-6 flex gap-3">
+          <div className="w-3/5 p-4 border-gray border-[1px] rounded-lg font-semibold">
+            Amount made
+          </div>
+          <div className="w-2/5 p-4 border-gray border-[1px] rounded-lg font-semibold">
+            Top selling products
+          </div>
         </section>
         <section>pending orders</section>
       </div>
