@@ -38,6 +38,19 @@ const Dashboard = () => {
     { name: "Store", svg: store },
     { name: "Profile", svg: profile },
   ];
+  const topNavItems = [
+    {
+      name: "book",
+      svg: book,
+    },
+    { name: "link", svg: link },
+    { name: "bell", svg: bell },
+    {
+      name: "shop",
+      svg: shop,
+    },
+    { name: "ellipses", svg: ellipses },
+  ];
   const capitalize = (word) => {
     const firstLetter = word.charAt(0);
     const firstLetterCap = firstLetter.toUpperCase();
@@ -152,21 +165,14 @@ const Dashboard = () => {
             {capitalize(active)}
           </span>
           <nav className="flex gap-4 sm:gap-2">
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={book} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={link} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={bell} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={shop} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={ellipses} alt="dots" className="sm:scale-[65%]" />
-            </div>
+            {topNavItems.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8"
+              >
+                <img src={item.svg} alt="dots" className="sm:scale-[65%]" />
+              </div>
+            ))}
           </nav>
         </nav>
         {active === "overview" ? (
