@@ -48,7 +48,9 @@ const Overview = () => {
             Top selling products
           </div>
         </section>
-        <section>pending orders</section>
+        <section className="h-full p-4 border-gray border-[1px] rounded-lg font-semibold">
+          Pending orders
+        </section>
       </div>
     </>
   );
