@@ -1,5 +1,5 @@
-import productPic from "../assets/temp/maksim-larin-NOpsC3nWTzY-unsplash.jpg";
 import { useNavigate } from "react-router";
+import productPic from "../assets/shoe.png"
 
 const Product = () => {
   const navigate = useNavigate();
