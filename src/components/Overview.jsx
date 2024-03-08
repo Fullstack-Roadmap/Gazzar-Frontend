@@ -7,7 +7,7 @@ import pageVisits from "../assets/svgs/page-visits.svg";
 import { useState } from "react";
 
 const Overview = () => {
-  const topSellingProducts = [...Array(5).keys()]
+  const topSellingProducts = [...Array(5).keys()];
   const overviewList = [
     { title: "No. of orders", svg: cart, amount: 17 },
     { title: "Products sold", svg: productsOverview, amount: 17 },
@@ -56,7 +56,16 @@ const Overview = () => {
             <img src={graph} alt="graph" />
           </div>
           <div className="w-2/5 p-4 border-gray border-[1px] rounded-lg font-semibold">
-            Top selling products
+            <h2>Top selling products</h2>
+            {topSellingProducts.map(() => (
+              <div className="flex gap-3">
+                <img src={cart} alt="pfp" className="h-8" />
+                <div className="">
+                  <h3>Super cool shirt</h3> <p>N5,000</p>
+                </div>
+                <h3>12pcs</h3>
+              </div>
+            ))}
           </div>
         </section>
         <section className="h-full p-4 border-gray border-[1px] rounded-lg font-semibold">
