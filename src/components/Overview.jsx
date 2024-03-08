@@ -2,10 +2,12 @@ import cart from "../assets/svgs/cart.svg";
 import checkmark from "../assets/svgs/checkmark.svg";
 import productsOverview from "../assets/svgs/products-overview.svg";
 import customersOverview from "../assets/svgs/customers-overview.svg";
+import graph from "../assets/svgs/graph1.svg";
 import pageVisits from "../assets/svgs/page-visits.svg";
 import { useState } from "react";
 
 const Overview = () => {
+  const topSellingProducts = [...Array(5).keys()]
   const overviewList = [
     { title: "No. of orders", svg: cart, amount: 17 },
     { title: "Products sold", svg: productsOverview, amount: 17 },
@@ -42,7 +44,16 @@ const Overview = () => {
         </ul>
         <section className="my-6 flex gap-3">
           <div className="w-3/5 p-4 border-gray border-[1px] rounded-lg font-semibold">
-            Amount made
+            <p>Amount made</p>
+            <h2>N72,500</h2>
+            <div>
+              <p>20 February 2022</p>
+              <div>
+                <span>Filter</span>
+                <span>Weekly</span>
+              </div>
+            </div>
+            <img src={graph} alt="graph" />
           </div>
           <div className="w-2/5 p-4 border-gray border-[1px] rounded-lg font-semibold">
             Top selling products
