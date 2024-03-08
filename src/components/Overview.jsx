@@ -12,7 +12,7 @@ const Overview = () => {
     { title: "No. of orders", svg: cart, amount: 17 },
     { title: "Products sold", svg: productsOverview, amount: 17 },
     { title: "New customers", svg: customersOverview, amount: 17 },
-    { title: "Page visits", svg: pageVisits, amount: 17 },
+    { title: "Page visits", svg: pageVisits, amount: 17 }
   ];
   const [registrationComplete, setRegistrationComplete] = useState(false);
   return (
