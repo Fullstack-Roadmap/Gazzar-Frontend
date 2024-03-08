@@ -45,12 +45,12 @@ const Overview = () => {
         <section className="my-6 flex gap-3">
           <div className="flex flex-col gap-3 w-3/5 p-7 border-gray border-[1px] rounded-lg font-semibold">
             <p className="font-bold text-lg">Amount made</p>
-            <h2 className=" text-blue font-semibold text-4xl">N72,500</h2>
+            <h2 className="text-blue font-semibold text-4xl">N72,500</h2>
             <div className="flex justify-between">
               <p>20 February 2022</p>
-              <div className="border-[1px] border-gray p-4">
+              <div className="border-[1px] border-gray rounded-md">
                 <span>Filter</span>
-                <span>Weekly</span>
+                <span className="bg-blue">Weekly</span>
               </div>
             </div>
             <img src={graph} alt="graph" />
