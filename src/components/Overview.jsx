@@ -26,7 +26,7 @@ const Overview = () => {
             </div>
           </div>
           <button className="bg-blue text-white py-4 px-10 rounded-lg font-semibold">
-            Complete account setup
+            Complete account setup.
           </button>
         </div>
       )}
