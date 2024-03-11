@@ -22,7 +22,7 @@ const Overview = () => {
           <div className="flex gap-3 font-semibold items-center">
             <img src={checkmark} alt="checkmark" />
             <div className="text-blue">
-              You're a few steps away from finishing
+              You're a few steps away from finishing.
             </div>
           </div>
           <button className="bg-blue text-white py-4 px-10 rounded-lg font-semibold">
