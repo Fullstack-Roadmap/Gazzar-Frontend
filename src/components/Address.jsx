@@ -3,7 +3,6 @@ import picOne from "../assets/Frame 36166 (1).png";
 import picTwo from "../assets/Store Page (2).png"
 import picThree from "../assets/Group 227 (1).png";
 import registerImg from '../assets/svgs/registerPattern.svg'
-import otpVerification from "../assets/svgs/otpVerification.svg"
 import ledger from "../assets/svgs/ledger.svg"
 
 const Address = ({ id }) => {
@@ -13,7 +12,7 @@ const Address = ({ id }) => {
     "
     >
       <header className="flex justify-start items-center gap-1">
-        <span className="rounded-sm aspect-square h-6 bg-[#FFB722]"></span>
+        <span className="rounded-sm aspect-square h-6 bg-[#f5af22]"></span>
         <p>Gazzar</p>
       </header>
       <div className="flex justify-center">

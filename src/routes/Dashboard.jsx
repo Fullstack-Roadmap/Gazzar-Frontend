@@ -1,5 +1,7 @@
 import book from "../assets/svgs/book.svg";
 import ellipses from "../assets/svgs/ellipses.svg";
+import ex from "../assets/svgs/ex.svg";
+import star from "../assets/svgs/star.svg";
 import link from "../assets/svgs/link.svg";
 import bell from "../assets/svgs/bell.svg";
 import shop from "../assets/svgs/shop.svg";
@@ -11,10 +13,13 @@ import feedback from "../assets/svgs/feedbacks.svg";
 import orders from "../assets/svgs/orders.svg";
 import store from "../assets/svgs/store.svg";
 import profile from "../assets/svgs/profile.svg";
+import arrowDown from "../assets/svgs/arrowDown.svg";
+import exit from "../assets/svgs/exit.svg";
+import profilePic from "../assets/profilePic.png";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { IoIosArrowForward } from "react-icons/io";
-import Overview from "./Overview";
+import Overview from "../components/Overview";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -33,6 +38,19 @@ const Dashboard = () => {
     { name: "Store", svg: store },
     { name: "Profile", svg: profile },
   ];
+  const topNavItems = [
+    {
+      name: "book",
+      svg: book,
+    },
+    { name: "link", svg: link },
+    { name: "bell", svg: bell },
+    {
+      name: "shop",
+      svg: shop,
+    },
+    { name: "ellipses", svg: ellipses }
+  ];
   const capitalize = (word) => {
     const firstLetter = word.charAt(0);
     const firstLetterCap = firstLetter.toUpperCase();
@@ -40,6 +58,11 @@ const Dashboard = () => {
     const capitalizedWord = firstLetterCap + remainingLetters;
     return capitalizedWord;
   };
+  const [registrationComplete, setRegistrationComplete] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+  const user = [
+    { businessName: "Omo Ope Ventures", email: "omoope01@gmail.com" },
+  ];
   return (
     <div className="flex h-full">
       {menuOpen && (
@@ -49,8 +72,7 @@ const Dashboard = () => {
         />
       )}
       <section
-        on
-        className={`lg:-translate-x-0 h-full bg-white border-r-[1px] border-b-[1px] rounded-md border-gray z-20 transition-all delay-300 duration-[400ms] ease-in-out ${
+        className={`lg:w-[22%] md:w-1/3 sm:w-2/3 lg:-translate-x-0 h-full bg-white border-r-[1px] border-b-[1px] border-gray z-20 transition-all delay-300 duration-[400ms] ease-in-out ${
           menuOpen ? "" : "sm:-translate-x-full md:-translate-x-full"
         }`}
       >
@@ -58,7 +80,7 @@ const Dashboard = () => {
           className="text-[1.375rem] font-extrabold flex items-center gap-2 mx-16 mb-14 mt-16 -translate-x-5 cursor-pointer"
           onClick={() => navigate("/storefront")}
         >
-          <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722] "></span>
+          <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722]"></span>
           <p>Gazzar.</p>
         </header>
         <ul
@@ -73,21 +95,59 @@ const Dashboard = () => {
             <li
               key={index}
               className={`cursor-pointer relative flex items-center gap-2 pl-7 py-4 w-full rounded-lg text-sm  ${
-                active === item.name
+                active === item.name.toLowerCase()
                   ? "font-bold bg-slate-200 text-blue"
                   : "font-semibold text-black/70"
               }`}
-              onClick={() => setNavActive(item.name)}
+              onClick={() => setNavActive(item.name.toLowerCase())}
             >
               <div
                 className={`absolute left-0 rounded-full bg-blue w-1 flex transition-all duration-300 ease-in-out ${
-                  active === item.name ? "h-3/4" : "h-0"
+                  active === item.name.toLowerCase() ? "h-3/4" : "h-0"
                 }`}
               />
               <img src={item.svg} alt={item.name} />
               {item.name}
             </li>
           ))}
+          {!registrationComplete && (
+            <div className="bg-blue flex flex-col gap-3 p-3 my-5 rounded-md items-center">
+              <button className="absolute left-7">
+                <img src={ex} alt="remove" className="h-5" />
+              </button>
+              <img src={star} alt="gold star" className="h-8" />
+              <p className="font-medium text-white flex text-center text-[0.7rem] w-4/5">
+                Upgrade to Gazzar pro to unlock more features today!
+              </p>
+              <button className="text-blue text-[0.7rem] font-bold flex justify-center bg-white py-2 rounded-md w-full">
+                Upgrade Now
+              </button>
+            </div>
+          )}
+          {loggedIn && (
+            <div className="w-full">
+              <div className="py-4 px-2 flex justify-between items-center border-gray border-t-2 w-full">
+                <img
+                  src={profilePic}
+                  alt="profile pic"
+                  className="h-10 aspect-auto"
+                />
+                <div>
+                  <h1 className="text-xs text-blue font-bold mb-1">
+                    {user[0].businessName}
+                  </h1>
+                  <p className="text-[0.65rem] text-black/50">
+                    {user[0].email}
+                  </p>
+                </div>
+                <img src={arrowDown} alt="arrow" />
+              </div>
+              <button className="flex gap-3 text-red bg-red-600/20 rounded-md px-7 py-4 mb-10 font-semibold text-red-600 w-full">
+                <img src={exit} alt="log out" />
+                Logout
+              </button>
+            </div>
+          )}
         </ul>
       </section>
       <section className="w-full sm:absolute md:absolute lg:static">
@@ -105,25 +165,21 @@ const Dashboard = () => {
             {capitalize(active)}
           </span>
           <nav className="flex gap-4 sm:gap-2">
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={book} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={link} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={bell} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={shop} alt="dots" className="sm:scale-[65%]" />
-            </div>
-            <div className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8">
-              <img src={ellipses} alt="dots" className="sm:scale-[65%]" />
-            </div>
+            {topNavItems.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-full h-[3.5rem] aspect-square flex justify-center items-center border-2 border-gray cursor-pointer sm:h-8"
+              >
+                <img src={item.svg} alt="dots" className="sm:scale-[65%]" />
+              </div>
+            ))}
           </nav>
         </nav>
-        {active === "overview" ? <Overview /> : 
-        active === "statistics" && <Overview/>}
+        {active === "overview" ? (
+          <Overview />
+        ) : (
+          active === "statistics" && <Overview />
+        )}
       </section>
     </div>
   );

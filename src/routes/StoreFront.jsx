@@ -3,7 +3,6 @@ import storeFrontHeroPic from "../assets/storeFrontHeroPic.png";
 import Product from "../components/Product";
 import { useState } from "react";
 import UserNavbar from "../components/UserNavbar";
-import { useNavigate } from "react-router";
 
 const StoreFront = () => {
   var products = [...Array(8).keys()];
