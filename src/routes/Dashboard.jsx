@@ -49,7 +49,7 @@ const Dashboard = () => {
       name: "shop",
       svg: shop,
     },
-    { name: "ellipses", svg: ellipses },
+    { name: "ellipses", svg: ellipses }
   ];
   const capitalize = (word) => {
     const firstLetter = word.charAt(0);
