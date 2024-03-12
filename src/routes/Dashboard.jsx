@@ -80,7 +80,7 @@ const Dashboard = () => {
           className="text-[1.375rem] font-extrabold flex items-center gap-2 mx-16 mb-14 mt-16 -translate-x-5 cursor-pointer"
           onClick={() => navigate("/storefront")}
         >
-          <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722] "></span>
+          <span className="mr-1 rounded-md aspect-square h-8 bg-[#FFB722]"></span>
           <p>Gazzar.</p>
         </header>
         <ul
