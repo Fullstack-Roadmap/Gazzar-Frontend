@@ -5,6 +5,7 @@ import customersOverview from "../assets/svgs/customers-overview.svg";
 import graph from "../assets/svgs/graph1.svg";
 import pageVisits from "../assets/svgs/page-visits.svg";
 import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Overview = () => {
   const topSellingProducts = [...Array(5).keys()];
@@ -12,7 +13,7 @@ const Overview = () => {
     { title: "No. of orders", svg: cart, amount: 17 },
     { title: "Products sold", svg: productsOverview, amount: 17 },
     { title: "New customers", svg: customersOverview, amount: 17 },
-    { title: "Page visits", svg: pageVisits, amount: 17 }
+    { title: "Page visits", svg: pageVisits, amount: 17 },
   ];
   const [registrationComplete, setRegistrationComplete] = useState(false);
   return (
@@ -48,9 +49,10 @@ const Overview = () => {
             <h2 className="text-blue font-semibold text-4xl">N72,500</h2>
             <div className="flex justify-between">
               <p>20 February 2022</p>
-              <div className="border-[1px] border-gray rounded-md">
-                <span>Filter</span>
-                <span className="bg-blue">Weekly</span>
+              <div className="flex gap-2 border-[1px] border-gray rounded-md overflow-hidden">
+                <span className="p-5 text-black/50">Filter</span>
+                <span className="flex justify-center items-center gap-1 p-5 bg-blue/20 text-blue">Weekly
+                <IoIosArrowDown/></span>
               </div>
             </div>
             <img src={graph} alt="graph" />
