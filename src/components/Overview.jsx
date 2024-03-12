@@ -57,10 +57,10 @@ const Overview = () => {
             </div>
             <img src={graph} alt="graph" className="mt-4" />
           </div>
-          <div className="w-2/5 p-4 border-gray border-[1px] rounded-lg font-semibold">
-            <h2>Top selling products</h2>
+          <div className="flex flex-col w-2/5 p-4 border-gray border-[1px] rounded-lg font-semibold text-xs">
+            <h2 className="text-base font-bold">Top selling products</h2>
             {topSellingProducts.map(() => (
-              <div className="flex gap-3">
+              <div className="flex gap-3 border-b-[1px] border-gray">
                 <img src={cart} alt="pfp" className="h-8" />
                 <div className="">
                   <h3>Super cool shirt</h3> <p>N5,000</p>
