@@ -44,18 +44,18 @@ const Overview = () => {
           ))}
         </ul>
         <section className="my-6 flex gap-3">
-          <div className="flex flex-col gap-3 w-3/5 p-7 border-gray border-[1px] rounded-lg font-semibold">
+          <div className="flex flex-col gap-2 w-3/5 p-7 border-gray border-[1px] rounded-lg font-semibold">
             <p className="font-bold text-lg">Amount made</p>
-            <h2 className="text-blue font-semibold text-4xl">N72,500</h2>
-            <div className="flex justify-between">
-              <p>20 February 2022</p>
-              <div className="flex gap-2 border-[1px] border-gray rounded-md overflow-hidden">
-                <span className="p-5 text-black/50">Filter</span>
-                <span className="flex justify-center items-center gap-1 p-5 bg-blue/20 text-blue">Weekly
+            <h2 className="text-blue font-bold text-3xl">N72,500</h2>
+            <div className="flex justify-between items-center">
+              <p className="text-black/50">20 February 2022</p>
+              <div className="flex gap-2 border-[1px] border-gray rounded-md overflow-hidden text-xs">
+                <span className="py-3 px-4 text-black/50">Filter</span>
+                <span className="flex justify-center items-center gap-1 py-3 px-4 bg-blue/20 text-blue">Weekly
                 <IoIosArrowDown/></span>
               </div>
             </div>
-            <img src={graph} alt="graph" />
+            <img src={graph} alt="graph" className="mt-4" />
           </div>
           <div className="w-2/5 p-4 border-gray border-[1px] rounded-lg font-semibold">
             <h2>Top selling products</h2>
