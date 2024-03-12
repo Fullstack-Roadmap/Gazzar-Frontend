@@ -51,21 +51,31 @@ const Overview = () => {
               <p className="text-black/50">20 February 2022</p>
               <div className="flex gap-2 border-[1px] border-gray rounded-md overflow-hidden text-xs">
                 <span className="py-3 px-4 text-black/50">Filter</span>
-                <span className="flex justify-center items-center gap-1 py-3 px-4 bg-blue/20 text-blue">Weekly
-                <IoIosArrowDown/></span>
+                <span className="flex justify-center items-center gap-1 py-3 px-4 bg-blue/20 text-blue">
+                  Weekly
+                  <IoIosArrowDown />
+                </span>
               </div>
             </div>
             <img src={graph} alt="graph" className="mt-4" />
           </div>
-          <div className="flex flex-col w-2/5 p-4 border-gray border-[1px] rounded-lg font-semibold text-xs">
-            <h2 className="text-base font-bold">Top selling products</h2>
-            {topSellingProducts.map(() => (
-              <div className="flex gap-3 border-b-[1px] border-gray">
-                <img src={cart} alt="pfp" className="h-8" />
-                <div className="">
-                  <h3>Super cool shirt</h3> <p>N5,000</p>
+          <div className="flex flex-col gap-5 w-2/5 py-8 px-12 border-gray border-[1px] rounded-lg font-semibold text-xs">
+            <h2 className="text-lg font-bold">Top selling products</h2>
+            {topSellingProducts.map((index) => (
+              <div
+                className={`p-2 flex gap-3 justify-between ${
+                  index !== topSellingProducts.length - 1 &&
+                  " border-b-[1px] border-gray"
+                }`}
+              >
+                <div className="flex gap-3 justify-center items-center">
+                  <img src={cart} alt="pfp" className="h-10" />
+                  <div>
+                    <h3 className="font-bold">Super cool shirt</h3>
+                    <p className=" text-sm text-black/50">N5,000</p>
+                  </div>
                 </div>
-                <h3>12pcs</h3>
+                <h3 className="font-extrabold">12pcs</h3>
               </div>
             ))}
           </div>
