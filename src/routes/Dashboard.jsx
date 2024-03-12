@@ -72,7 +72,7 @@ const Dashboard = () => {
         />
       )}
       <section
-        className={`w-[22%] lg:-translate-x-0 h-full bg-white border-r-[1px] border-b-[1px] border-gray z-20 transition-all delay-300 duration-[400ms] ease-in-out ${
+        className={`lg:w-[22%] md:w-1/3 sm:w-2/3 lg:-translate-x-0 h-full bg-white border-r-[1px] border-b-[1px] border-gray z-20 transition-all delay-300 duration-[400ms] ease-in-out ${
           menuOpen ? "" : "sm:-translate-x-full md:-translate-x-full"
         }`}
       >
