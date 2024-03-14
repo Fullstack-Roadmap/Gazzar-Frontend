@@ -25,7 +25,7 @@ const Carousel = ({ id }) => {
       setInView(3);
     }
   };
-  const style = { color: "white", fontSize: "1.5rem"};
+  const style = { color: "white", fontSize: "1.5rem" };
   return (
     <>
       <span

@@ -61,7 +61,7 @@ const Dashboard = () => {
   const [registrationComplete, setRegistrationComplete] = useState(false);
   const [loggedIn, setLoggedIn] = useState(true);
   const user = [
-    { businessName: "Omo Ope Ventures", email: "omoope01@gmail.com" },
+    { businessName: "Omo Ope Ventures", email: "omoope01@gmail.com" }
   ];
   return (
     <div className="flex h-full">
