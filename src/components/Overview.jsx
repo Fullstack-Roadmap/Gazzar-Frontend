@@ -9,6 +9,39 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const Overview = () => {
   const topSellingProducts = [...Array(5).keys()];
+  const pendingOrders = [
+    {
+      name: "Sleek nike shorts",
+      qty: 10,
+      status: "Completed",
+      totalAmount: "N7,000",
+    },
+    {
+      name: "Sleek nike shorts",
+      qty: 5,
+      status: "Completed",
+      totalAmount: "N7,000",
+    },
+    {
+      name: "Sleek nike shorts",
+      qty: 23,
+      status: "Completed",
+      totalAmount: "N21,000",
+    },
+    {
+      name: "Sleek nike shorts",
+      qty: 12,
+      status: "Completed",
+      totalAmount: "N7,000",
+    },
+    {
+      name: "Sleek nike shorts",
+      qty: 16,
+      status: "Completed",
+      totalAmount: "N13,500",
+    },
+  ];
+  const pendingOrdersColumns = ["Qty", "Status", "Total amount"];
   const overviewList = [
     { title: "No. of orders", svg: cart, amount: 17 },
     { title: "Products sold", svg: productsOverview, amount: 17 },
@@ -80,8 +113,33 @@ const Overview = () => {
             ))}
           </div>
         </section>
-        <section className="h-full p-4 border-gray border-[1px] rounded-lg font-semibold">
+        <section className="h-full p-7 border-gray border-[1px] rounded-lg font-bold text-xl">
           Pending orders
+          <div className="mt-7">
+            <ul className="flex font-bold text-base bg-gray/50 p-3 rounded-md">
+              <li className="w-full ml-3">Name</li>
+              {pendingOrdersColumns.map((columnName) => (
+                <li className="w-full text-center">{columnName}</li>
+              ))}
+            </ul>
+            <ul>
+              {pendingOrders.map((item, index) => (
+                <li className="text-sm font-medium">
+                  <ul
+                    className={`h-16 flex items-center px-5 py-3 w-full ${
+                      index !== pendingOrders.length - 1 &&
+                      "border-b-[1px] border-gray"
+                    }`}
+                  >
+                    <li className="w-full">{item.name}</li>
+                    <li className="w-full text-center">{item.qty}</li>
+                    <li className="w-full text-center">{item.status}</li>
+                    <li className="w-full text-center">{item.totalAmount}</li>
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
       </div>
     </>
