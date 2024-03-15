@@ -76,7 +76,7 @@ const Overview = () => {
             </li>
           ))}
         </ul>
-        <section className="my-6 flex gap-3">
+        <section className="my-6 flex gap-8">
           <div className="flex flex-col gap-2 w-3/5 p-7 border-gray border-[1px] rounded-lg font-semibold">
             <p className="font-bold text-lg">Amount made</p>
             <h2 className="text-blue font-bold text-3xl">N72,500</h2>
@@ -92,11 +92,11 @@ const Overview = () => {
             </div>
             <img src={graph} alt="graph" className="mt-4" />
           </div>
-          <div className="flex flex-col gap-5 w-2/5 py-8 px-12 border-gray border-[1px] rounded-lg font-semibold text-xs">
-            <h2 className="text-lg font-bold">Top selling products</h2>
+          <div className="flex flex-col w-2/5 py-8 px-12 border-gray border-[1px] rounded-lg font-semibold text-xs">
+            <h2 className="text-lg font-bold mb-3">Top selling products</h2>
             {topSellingProducts.map((index) => (
               <div
-                className={`p-2 flex gap-3 justify-between ${
+                className={`px-2 flex justify-between items-center h-20 ${
                   index !== topSellingProducts.length - 1 &&
                   " border-b-[1px] border-gray"
                 }`}
@@ -113,16 +113,21 @@ const Overview = () => {
             ))}
           </div>
         </section>
-        <section className="h-full p-7 border-gray border-[1px] rounded-lg font-bold text-xl">
-          Pending orders
+        <section className="h-full p-7 border-gray border-[1px] rounded-lg font-bold text-xl flex flex-col justify-between w-full">
+          <header className="flex justify-between items-center w-full">
+            Pending orders
+            <p className="text-blue text-sm underline underline-offset-2">
+              See all
+            </p>
+          </header>
           <div className="mt-7">
-            <ul className="flex font-bold text-base bg-gray/50 p-3 rounded-md">
-              <li className="w-full ml-3">Name</li>
+            <ul className="flex font-extrabold text-sm bg-gray/50 px-3 py-4 rounded-md">
+              <li className="w-full ml-3 -mr-1">Name</li>
               {pendingOrdersColumns.map((columnName) => (
                 <li className="w-full text-center">{columnName}</li>
               ))}
             </ul>
-            <ul>
+            <ul className="mt-3">
               {pendingOrders.map((item, index) => (
                 <li className="text-sm font-medium">
                   <ul
@@ -132,9 +137,16 @@ const Overview = () => {
                     }`}
                   >
                     <li className="w-full">{item.name}</li>
-                    <li className="w-full text-center">{item.qty}</li>
-                    <li className="w-full text-center">{item.status}</li>
-                    <li className="w-full text-center">{item.totalAmount}</li>
+                    <li className="w-full text-center text-lg">{item.qty}</li>
+                    <li className="w-full flex justify-center items-center translate-x-2">
+                      <div className="flex justify-center items-center gap-2 bg-green-400/20 text-green-600 font-bold text-xs py-2 px-4 rounded-full">
+                        {item.status}
+                        <IoIosArrowDown />
+                      </div>
+                    </li>
+                    <li className="w-full text-center text-blue text-lg font-bold">
+                      {item.totalAmount}
+                    </li>
                   </ul>
                 </li>
               ))}

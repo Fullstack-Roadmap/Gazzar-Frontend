@@ -64,7 +64,7 @@ const Dashboard = () => {
     { businessName: "Omo Ope Ventures", email: "omoope01@gmail.com" }
   ];
   return (
-    <div className="flex h-full">
+    <div className="flex h-full overflow-hidden">
       {menuOpen && (
         <div
           className="absolute z-10 w-screen h-screen"
@@ -150,7 +150,7 @@ const Dashboard = () => {
           )}
         </ul>
       </section>
-      <section className="w-full sm:absolute md:absolute lg:static">
+      <section className="w-full sm:absolute md:absolute lg:static overflow-hidden">
         <nav className="flex justify-between items-center border-b-[1px] border-gray px-10 sm:pr-6 py-6">
           <IoIosArrowForward
             className="z-20 absolute lg:hidden -translate-x-6 scale-125 cursor-pointer"
