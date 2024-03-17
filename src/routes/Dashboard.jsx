@@ -49,7 +49,7 @@ const Dashboard = () => {
       name: "shop",
       svg: shop,
     },
-    { name: "ellipses", svg: ellipses }
+    { name: "ellipses", svg: ellipses },
   ];
   const capitalize = (word) => {
     const firstLetter = word.charAt(0);
@@ -61,7 +61,7 @@ const Dashboard = () => {
   const [registrationComplete, setRegistrationComplete] = useState(false);
   const [loggedIn, setLoggedIn] = useState(true);
   const user = [
-    { businessName: "Omo Ope Ventures", email: "omoope01@gmail.com" }
+    { businessName: "Omo Ope Ventures", email: "omoope01@gmail.com" },
   ];
   return (
     <div className="flex h-full overflow-hidden">
@@ -140,7 +140,7 @@ const Dashboard = () => {
                     {user[0].email}
                   </p>
                 </div>
-                <img src={arrowDown} alt="arrow"/>
+                <img src={arrowDown} alt="arrow" />
               </div>
               <button className="flex gap-3 text-red bg-red-600/20 rounded-md px-7 py-4 mb-10 font-semibold text-red-600 w-full">
                 <img src={exit} alt="log out" />
